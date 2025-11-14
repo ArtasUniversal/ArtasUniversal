@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Artas Universal - Shërbime profesionale të ndërtimit: montim pllakash bekaton, punime me eskavator, shpuarje betoni dhe shërbime komunale">
   <title>Artas Universal - Shërbime Profesionale të Ndërtimit</title>
+  
+  <link rel="icon" type="image/png" href="logo-artas.png">
+  <link rel="apple-touch-icon" href="logo-artas.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
       --primary: #2c3e50;
-      --secondary: #e67e22;
+      --secondary: #c05100; 
       --accent: #3498db;
       --light: #f9f9f9;
       --dark: #2c3e50;
@@ -22,6 +25,27 @@
       padding: 0;
       box-sizing: border-box;
     }
+
+    /* === EFEKTI "WOW" - ANIMACION GJATË LËVIZJES === */
+    /* Gjendja fillestare e fshehur e elementeve.
+      Ato do të jenë të padukshme dhe pak më poshtë.
+    */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(40px); /* I lëviz pak poshtë */
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      /* Vonesa e animacionit do të vendoset nga JS */
+      transition-delay: var(--scroll-delay, 0s);
+    }
+    
+    /* Stili "aktiv" që JS do të shtojë kur elementi 
+      të hyjë në ekran.
+    */
+    .reveal-on-scroll.active {
+      opacity: 1;
+      transform: translateY(0); /* Kthehet në pozicionin origjinal */
+    }
+    /* === FUNDI I EFEKTIT "WOW" === */
     
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -105,6 +129,9 @@
       font-size: 24px;
       color: white;
       cursor: pointer;
+      background: transparent;
+      border: none;
+      padding: 0;
     }
     
     .hero {
@@ -157,6 +184,7 @@
       padding: 80px 20px;
       max-width: 1200px;
       margin: 0 auto;
+      overflow: hidden; /* I rëndësishëm për të parandaluar shiritat anësorë gjatë animacionit */
     }
     
     h2 {
@@ -248,6 +276,25 @@
     
     .gallery-item:hover .gallery-overlay {
       transform: translateY(0);
+    }
+    
+    .gallery-overlay a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
+    }
+    .gallery-overlay a h3 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .gallery-overlay a i {
+      font-size: 24px;
     }
     
     .about {
@@ -460,9 +507,9 @@
           <li><a href="#about">Rreth nesh</a></li>
           <li><a href="#contact">Kontakt</a></li>
         </ul>
-        <div class="mobile-menu">
+        <button class="mobile-menu" aria-label="Hap menynë" aria-expanded="false">
           <i class="fas fa-bars"></i>
-        </div>
+        </button>
       </nav>
     </div>
   </header>
@@ -478,22 +525,22 @@
   <section id="services">
     <h2>Shërbimet tona</h2>
     <div class="services">
-      <div class="service">
+      <div class="service reveal-on-scroll">
         <i class="fas fa-th"></i>
         <h3>Montim i pllakave të bekatonit</h3>
         <p>Montim profesional i pllakave të bekatonit me materiale të cilësisë së lartë dhe teknika moderne.</p>
       </div>
-      <div class="service">
+      <div class="service reveal-on-scroll">
         <i class="fas fa-tractor"></i>
         <h3>Punime me eskavator</h3>
         <p>Shërbime të specializuara me eskavator për projekte të ndryshme ndërtimi dhe zhvillimi.</p>
       </div>
-      <div class="service">
+      <div class="service reveal-on-scroll">
         <i class="fas fa-hammer"></i>
         <h3>Shpuarje betoni me mjete profesionale</h3>
         <p>Shpuarje të saktë dhe të sigurt të betonit me pajisje moderne dhe staf të kualifikuar.</p>
       </div>
-      <div class="service">
+      <div class="service reveal-on-scroll">
         <i class="fas fa-building"></i>
         <h3>Shërbime ndërtimi & komunale</h3>
         <p>Zgjidhje të plota për nevoja të ndryshme ndërtimi dhe shërbime komunale me cilësi të garantuar.</p>
@@ -504,34 +551,37 @@
   <section id="gallery">
     <h2>Galeria</h2>
     <div class="gallery">
-      <div class="gallery-item">
-        <img src="IMG_2617.png" alt="Punime Bekaton">
+      <div class="gallery-item reveal-on-scroll">
+        <img src="IMG_2617.png" alt="Punime Bekaton" loading="lazy">
         <div class="gallery-overlay">
           <h3>Montim i pllakave të bekatonit</h3>
         </div>
       </div>
-      <div class="gallery-item">
-        <img src="IMG_2612.png" alt="Punime me Eskavator">
+      <div class="gallery-item reveal-on-scroll">
+        <img src="IMG_2612.png" alt="Punime me Eskavator" loading="lazy">
         <div class="gallery-overlay">
           <h3>Punime me eskavator</h3>
         </div>
       </div>
-      <div class="gallery-item">
-        <img src="IMG_2616.png" alt="Shpuarje Betoni">
+      <div class="gallery-item reveal-on-scroll">
+        <img src="IMG_2616.png" alt="Shpuarje Betoni" loading="lazy">
         <div class="gallery-overlay">
           <h3>Shpuarje betoni</h3>
         </div>
       </div>
-      <div class="gallery-item">
-        <img src="IMG_2614.png" alt="Projekte të Ndërtimit">
+      <div class="gallery-item reveal-on-scroll">
+        <img src="IMG_2614.png" alt="Projekte të Ndërtimit" loading="lazy">
         <div class="gallery-overlay">
           <h3>Projekte të ndryshme ndërtimi</h3>
         </div>
       </div>
-      <div class="gallery-item">
-        <img src="IMG_2620.png" alt="Projekte tjera">
+      <div class="gallery-item reveal-on-scroll">
+        <img src="IMG_2620.png" alt="Projekte tjera" loading="lazy">
         <div class="gallery-overlay">
-         <a href="https://www.instagram.com/artasuniversal/" target="_blank"> <h3>Për më shumë projekte na vizitoni ne Instagram</h3><i class="fab fa-instagram"></i></a>
+         <a href="https://www.instagram.com/artasuniversal/" target="_blank">
+            <h3>Për më shumë projekte na vizitoni ne Instagram</h3>
+            <i class="fab fa-instagram"></i>
+         </a>
         </div>
       </div>
     </div>
@@ -540,14 +590,14 @@
   <section id="about">
     <h2>Rreth nesh</h2>
     <div class="about">
-      <div class="about-content">
+      <div class="about-content reveal-on-scroll">
         <h3>Ekspertëzë në fushën e ndërtimit</h3>
         <p>Artas Universal është një kompani me përvojë të gjatë në ofrimin e shërbimeve të ndërtimit. Me një ekip të specializuar dhe pajisje moderne, ne garantojmë cilësinë dhe përfundimin në kohë të çdo projekti.</p>
         <p>Ne kemi marrë pjesë në projekte të shumta ndërtimi, duke ofruar zgjidhje të qëndrueshme dhe elegante për klientët tanë. Fokusi ynë kryesor është kënaqësia e plotë e klientit dhe përmbushja e të gjitha standardeve të sigurisë.</p>
         <a href="#contact" class="btn">Kontaktoni për më shumë informacion</a>
       </div>
-      <div class="about-image">
-        <img src="IMG_2615.jpg" alt="Rreth nesh">
+      <div class="about-image reveal-on-scroll">
+        <img src="IMG_2615.jpg" alt="Rreth nesh" loading="lazy">
       </div>
     </div>
   </section>
@@ -556,17 +606,17 @@
     <div class="contact">
       <h2>Kontakt</h2>
       <div class="contact-info">
-        <div class="contact-item">
+        <div class="contact-item reveal-on-scroll">
           <i class="fas fa-phone"></i>
           <h3>Telefon</h3>
           <p>+389 70 259 975</p>
         </div>
-        <div class="contact-item">
+        <div class="contact-item reveal-on-scroll">
           <i class="fas fa-envelope"></i>
           <h3>Email</h3>
           <p>artasuniversal@hotmail.com</p>
         </div>
-        <div class="contact-item">
+        <div class="contact-item reveal-on-scroll">
           <i class="fas fa-map-marker-alt"></i>
           <h3>Adresa</h3>
           <p>Pallcisht i Poshtëm/Tetovë, Maqedonia e Veriut</p>
@@ -610,13 +660,19 @@
   <script>
     // Mobile menu toggle
     document.querySelector('.mobile-menu').addEventListener('click', function() {
-      document.querySelector('.nav-links').classList.toggle('active');
+      const navLinks = document.querySelector('.nav-links');
+      const isOpened = navLinks.classList.toggle('active');
+      this.setAttribute('aria-expanded', isOpened);
     });
     
     // Close mobile menu when clicking on a link
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
-        document.querySelector('.nav-links').classList.remove('active');
+        const navLinks = document.querySelector('.nav-links');
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          document.querySelector('.mobile-menu').setAttribute('aria-expanded', 'false');
+        }
       });
     });
     
@@ -636,10 +692,8 @@
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        
         const targetId = this.getAttribute('href');
         if (targetId === '#') return;
-        
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
           window.scrollTo({
@@ -649,6 +703,55 @@
         }
       });
     });
+
+    // === EFEKTI "WOW" - KODI JAVASCRIPT ===
+    document.addEventListener('DOMContentLoaded', () => {
+      // Përgatit vëzhguesin (observer)
+      const observerOptions = {
+        root: null, // Vëzhgo në lidhje me viewport-in
+        rootMargin: '0px',
+        threshold: 0.1 // Aktivizohet kur 10% e elementit është e dukshme
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Shto klasën "active" për të aktivizuar animacionin CSS
+            entry.target.classList.add('active');
+            // Pasi të animohet, ndalo së vëzhguari për të kursyer burime
+            observer.unobserve(entry.target); 
+          }
+        });
+      }, observerOptions);
+
+      // Gjej të gjithë elementet që duam të animojmë
+      const elementsToReveal = document.querySelectorAll('.reveal-on-scroll');
+      
+      // Për çdo element, apliko një vonesë të vogël (efekti "stagger")
+      // për t'i bërë të shfaqen njëri pas tjetrit, jo të gjithë njëherësh.
+      const groupedElements = {};
+
+      elementsToReveal.forEach(el => {
+        const parentSection = el.closest('section');
+        if (!parentSection) return;
+
+        const parentId = parentSection.id;
+        if (!groupedElements[parentId]) {
+          groupedElements[parentId] = [];
+        }
+        groupedElements[parentId].push(el);
+      });
+
+      // Për çdo grup, apliko vonesat dhe fillo vëzhgimin
+      Object.values(groupedElements).forEach(group => {
+        group.forEach((el, index) => {
+          // Vendos vonesën si një variabël CSS (p.sh., 0s, 0.15s, 0.3s)
+          el.style.setProperty('--scroll-delay', `${index * 0.15}s`);
+          observer.observe(el); // Shto elementin në vëzhgues
+        });
+      });
+    });
+    // === FUNDI I EFEKTIT "WOW" ===
   </script>
 </body>
 </html>
