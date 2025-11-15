@@ -298,14 +298,21 @@
       overflow: hidden;
       border-radius: 8px;
       height: 250px;
+      /* Përmirësime për performancë */
+      transform: translateZ(0);
+      will-change: transform;
+      backface-visibility: hidden;
     }
     
     .gallery-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s;
-      transform: translateZ(0); /* Për performancë më të mirë */
+      transition: transform 0.5s ease-out;
+      /* Përmirësime për performancë */
+      transform: translateZ(0);
+      will-change: transform;
+      backface-visibility: hidden;
     }
     
     .gallery-item:hover img {
@@ -321,7 +328,10 @@
       color: white;
       padding: var(--space-sm);
       transform: translateY(100%);
-      transition: transform 0.3s;
+      transition: transform 0.3s ease-out;
+      /* Përmirësime për performancë */
+      transform: translateZ(0);
+      will-change: transform;
     }
     
     .gallery-item:hover .gallery-overlay {
@@ -601,6 +611,35 @@
         width: 45px;
         height: 45px;
       }
+      
+      /* Përmirësime për galerinë në mobile */
+      .gallery {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+      }
+      
+      .gallery-item {
+        height: 200px;
+      }
+      
+      .gallery-item img {
+        /* Çaktivizo animacionin e zoom-it në pajisjet mobile për performancë */
+        transition: none;
+      }
+      
+      .gallery-item:hover img {
+        transform: none;
+      }
+      
+      .gallery-overlay {
+        /* Shfaq overlay-in gjithmonë në mobile */
+        transform: translateY(0);
+        background: rgba(0,0,0,0.5);
+      }
+      
+      .gallery-item:hover .gallery-overlay {
+        transform: translateY(0);
+      }
     }
     
     @media (max-width: 576px) {
@@ -618,6 +657,11 @@
       
       .contact-form {
         padding: var(--space-md);
+      }
+      
+      /* Përmirësime shtesë për mobile */
+      .gallery-item {
+        height: 180px;
       }
     }
   </style>
@@ -930,8 +974,13 @@
           }, 1000);
         });
       }
-    });
-    // === FUNDI I EFEKTIT "WOW" ===
-  </script>
-</body>
-</html>
+      
+      // Optimizim për galerinë në pajisjet mobile
+      const isMobile = window.innerWidth <= 768;
+      if (isMobile) {
+        // Ngarko imazhet e galerisë me prioritet më të ulët
+        const galleryImages = document.querySelectorAll('.gallery-item img');
+        galleryImages.forEach(img => {
+          img.setAttribute('fetchpriority', 'low');
+        });
+     
