@@ -15,33 +15,11 @@
   
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png">
   <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- Struktura e dhënave të strukturuara për SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Artas Universal",
-    "description": "Shërbime profesionale të ndërtimit",
-    "url": "https://artasuniversal.com",
-    "telephone": "+38970259975",
-    "email": "artasuniversal@hotmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Pallcisht i Poshtëm",
-      "addressLocality": "Tetovë",
-      "addressCountry": "Maqedonia e Veriut"
-    },
-    "serviceType": [
-      "Montim i pllakave të bekatonit",
-      "Punime me eskavator",
-      "Shpuarje betoni",
-      "Shërbime ndërtimi dhe komunale"
-    ],
-    "areaServed": "Maqedonia e Veriut"
-  }
-  </script>
+  <!-- Optimizime për performancë në mobile -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
   
   <style>
     :root {
@@ -53,22 +31,22 @@
       --text: #333;
       --shadow: 0 4px 6px rgba(0,0,0,0.1);
       
-      /* Variabla të reja për madhësitë e shkronjave */
+      /* Variabla të reja për madhësitë e shkronjave - optimizuar për mobile */
       --font-xs: 14px;
-      --font-sm: 16px;
-      --font-md: 18px;
-      --font-lg: 22px;
-      --font-xl: 28px;
-      --font-xxl: 36px;
-      --font-hero: 48px;
+      --font-sm: 15px;
+      --font-md: 16px;
+      --font-lg: 18px;
+      --font-xl: 22px;
+      --font-xxl: 26px;
+      --font-hero: 32px;
       
-      /* Variabla për hapësirat */
-      --space-xs: 10px;
-      --space-sm: 15px;
-      --space-md: 20px;
-      --space-lg: 30px;
-      --space-xl: 50px;
-      --space-xxl: 80px;
+      /* Variabla për hapësirat - optimizuar për mobile */
+      --space-xs: 8px;
+      --space-sm: 12px;
+      --space-md: 16px;
+      --space-lg: 24px;
+      --space-xl: 32px;
+      --space-xxl: 48px;
     }
     
     * {
@@ -80,8 +58,8 @@
     /* === EFEKTI "WOW" - ANIMACION GJATË LËVIZJES === */
     .reveal-on-scroll {
       opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
       transition-delay: var(--scroll-delay, 0s);
     }
     
@@ -92,22 +70,26 @@
     /* === FUNDI I EFEKTIT "WOW" === */
     
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: var(--text);
       background: var(--light);
-      line-height: 1.6;
+      line-height: 1.5;
       font-size: var(--font-sm);
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
     }
     
+    /* Header i optimizuar për mobile */
     header {
       background: var(--primary);
-      padding: var(--space-sm) var(--space-lg);
+      padding: var(--space-sm) var(--space-md);
       position: fixed;
       width: 100%;
       top: 0;
       z-index: 1000;
       box-shadow: var(--shadow);
       transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
     }
     
     .header-container {
@@ -119,7 +101,7 @@
     }
     
     .logo {
-      font-size: var(--font-xl);
+      font-size: var(--font-lg);
       font-weight: bold;
       color: white;
     }
@@ -139,7 +121,7 @@
     }
     
     .nav-links li {
-      margin-left: var(--space-xl);
+      margin-left: var(--space-lg);
     }
     
     .nav-links a {
@@ -148,6 +130,7 @@
       font-weight: 500;
       transition: color 0.3s;
       position: relative;
+      font-size: var(--font-sm);
     }
     
     .nav-links a:hover {
@@ -177,28 +160,48 @@
       background: transparent;
       border: none;
       padding: 0;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
     }
     
+    /* Hero i optimizuar për mobile */
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('IMG_2618.png') center/cover no-repeat;
-      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+      height: 70vh;
+      min-height: 500px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       color: white;
-      margin-top: 70px;
+      margin-top: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
     
     .hero-content {
       max-width: 800px;
       padding: 0 var(--space-md);
+      z-index: 1;
     }
     
     .hero h1 {
       font-size: var(--font-hero);
       margin-bottom: var(--space-md);
       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      line-height: 1.2;
     }
     
     .hero p {
@@ -210,20 +213,25 @@
       display: inline-block;
       background: var(--secondary);
       color: white;
-      padding: var(--space-xs) var(--space-lg);
-      border-radius: 5px;
+      padding: var(--space-sm) var(--space-xl);
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
       transition: all 0.3s;
       border: none;
       cursor: pointer;
       font-size: var(--font-sm);
+      min-height: 44px;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
     
     .btn:hover {
       background: #d35400;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     }
     
     section {
@@ -239,21 +247,23 @@
       font-size: var(--font-xxl);
       color: var(--primary);
       position: relative;
+      line-height: 1.2;
     }
     
     h2::after {
       content: '';
       position: absolute;
-      width: 80px;
+      width: 60px;
       height: 4px;
       background: var(--secondary);
-      bottom: -15px;
+      bottom: -12px;
       left: 50%;
       transform: translateX(-50%);
     }
     
     h3 {
       font-size: var(--font-lg);
+      line-height: 1.3;
     }
     
     .services {
@@ -265,19 +275,19 @@
     .service {
       background: white;
       padding: var(--space-lg);
-      border-radius: 10px;
+      border-radius: 12px;
       text-align: center;
       transition: all 0.3s;
       box-shadow: var(--shadow);
     }
     
     .service:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
     
     .service i {
-      font-size: 48px;
+      font-size: 42px;
       color: var(--secondary);
       margin-bottom: var(--space-md);
     }
@@ -287,9 +297,14 @@
       color: var(--primary);
     }
     
+    .service p {
+      font-size: var(--font-sm);
+    }
+    
+    /* Galeria e optimizuar për mobile */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: var(--space-md);
     }
     
@@ -297,19 +312,19 @@
       position: relative;
       overflow: hidden;
       border-radius: 8px;
-      height: 250px;
+      height: 220px;
+      background: #f5f5f5;
     }
     
     .gallery-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s;
-      transform: translateZ(0); /* Për performancë më të mirë */
+      transition: transform 0.5s ease;
     }
     
     .gallery-item:hover img {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
     
     .gallery-overlay {
@@ -341,17 +356,17 @@
     
     .gallery-overlay a h3 {
       margin: 0 0 var(--space-xs) 0;
-      font-size: var(--font-md);
+      font-size: var(--font-sm);
       font-weight: 500;
     }
     
     .gallery-overlay a i {
-      font-size: var(--font-lg);
+      font-size: var(--font-md);
     }
     
     .about {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: var(--space-xl);
       align-items: center;
     }
@@ -369,6 +384,7 @@
       border-radius: 10px;
       overflow: hidden;
       box-shadow: var(--shadow);
+      order: -1;
     }
     
     .about-image img {
@@ -380,7 +396,7 @@
     .contact {
       background: var(--primary);
       color: white;
-      border-radius: 10px;
+      border-radius: 12px;
       padding: var(--space-xl);
       text-align: center;
     }
@@ -395,7 +411,7 @@
     
     .contact-info {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: var(--space-lg);
       margin-bottom: var(--space-xl);
     }
@@ -407,7 +423,7 @@
     }
     
     .contact-item i {
-      font-size: var(--font-xxl);
+      font-size: 32px;
       color: var(--secondary);
       margin-bottom: var(--space-sm);
     }
@@ -436,9 +452,10 @@
       width: 100%;
       padding: var(--space-sm);
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       font-size: var(--font-sm);
       font-family: inherit;
+      min-height: 44px;
     }
     
     textarea.form-control {
@@ -457,8 +474,8 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 50px;
-      height: 50px;
+      width: 44px;
+      height: 44px;
       background: var(--secondary);
       color: white;
       border-radius: 50%;
@@ -469,16 +486,16 @@
     .social-links a:hover {
       background: white;
       color: var(--secondary);
-      transform: translateY(-5px);
+      transform: translateY(-3px);
     }
     
     /* Butoni "Kthehu në krye" */
     .back-to-top {
       position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 50px;
-      height: 50px;
+      bottom: 20px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
       background: var(--secondary);
       color: white;
       border-radius: 50%;
@@ -491,6 +508,7 @@
       transition: all 0.3s;
       z-index: 999;
       box-shadow: var(--shadow);
+      font-size: var(--font-md);
     }
     
     .back-to-top.visible {
@@ -500,14 +518,14 @@
     
     .back-to-top:hover {
       background: #d35400;
-      transform: translateY(-3px);
+      transform: translateY(-2px);
     }
     
     footer {
       background: var(--dark);
       color: #ddd;
       text-align: center;
-      padding: var(--space-lg) var(--space-md);
+      padding: var(--space-xl) var(--space-md);
     }
     
     .footer-content {
@@ -531,6 +549,8 @@
     
     .footer-section ul li {
       margin-bottom: var(--space-xs);
+      display: flex;
+      align-items: center;
     }
     
     .footer-section a {
@@ -543,35 +563,58 @@
       color: var(--secondary);
     }
     
+    /* Rregullimi i numrit të telefonit - nuk do të jetë më blu */
+    .footer-section .fa-phone,
+    .footer-section .fa-envelope,
+    .footer-section .fa-map-marker-alt {
+      color: #ddd !important;
+      margin-right: 8px;
+      width: 16px;
+      text-align: center;
+    }
+    
+    .footer-section ul li span {
+      color: #ddd;
+    }
+    
     .copyright {
       margin-top: var(--space-lg);
       padding-top: var(--space-md);
       border-top: 1px solid #444;
       text-align: center;
+      font-size: var(--font-sm);
     }
     
-    /* Responsive Design */
-    @media (max-width: 992px) {
-      .about {
-        grid-template-columns: 1fr;
+    /* Responsive Design - Mobile First */
+    @media (max-width: 768px) {
+      :root {
+        --font-xs: 13px;
+        --font-sm: 14px;
+        --font-md: 15px;
+        --font-lg: 17px;
+        --font-xl: 20px;
+        --font-xxl: 24px;
+        --font-hero: 28px;
+        
+        --space-xs: 6px;
+        --space-sm: 10px;
+        --space-md: 14px;
+        --space-lg: 20px;
+        --space-xl: 28px;
+        --space-xxl: 40px;
       }
       
-      .hero h1 {
-        font-size: var(--font-xxl);
-      }
-    }
-    
-    @media (max-width: 768px) {
       .nav-links {
         display: none;
-        position: absolute;
-        top: 70px;
+        position: fixed;
+        top: 60px;
         left: 0;
         width: 100%;
         background: var(--primary);
         flex-direction: column;
         padding: var(--space-md) 0;
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 999;
       }
       
       .nav-links.active {
@@ -579,37 +622,68 @@
       }
       
       .nav-links li {
-        margin: var(--space-xs) 0;
+        margin: 0;
         text-align: center;
+        width: 100%;
+      }
+      
+      .nav-links a {
+        display: block;
+        padding: var(--space-sm) var(--space-md);
+        width: 100%;
       }
       
       .mobile-menu {
-        display: block;
+        display: flex;
+      }
+      
+      .hero {
+        height: 60vh;
+        min-height: 400px;
+        margin-top: 50px;
       }
       
       .hero h1 {
-        font-size: var(--font-xl);
+        font-size: var(--font-xxl);
       }
       
       .hero p {
         font-size: var(--font-sm);
       }
       
-      .back-to-top {
-        bottom: 20px;
-        right: 20px;
-        width: 45px;
-        height: 45px;
-      }
-    }
-    
-    @media (max-width: 576px) {
       section {
-        padding: 60px var(--space-sm);
+        padding: var(--space-xl) var(--space-sm);
       }
       
       h2 {
         font-size: var(--font-xl);
+        margin-bottom: var(--space-lg);
+      }
+      
+      .services {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+      }
+      
+      .service {
+        padding: var(--space-md);
+      }
+      
+      .service i {
+        font-size: 36px;
+      }
+      
+      .gallery {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+      }
+      
+      .gallery-item {
+        height: 200px;
+      }
+      
+      .about {
+        gap: var(--space-lg);
       }
       
       .contact {
@@ -618,6 +692,69 @@
       
       .contact-form {
         padding: var(--space-md);
+      }
+      
+      .contact-info {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+      }
+      
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+        text-align: center;
+      }
+      
+      .footer-section ul li {
+        justify-content: center;
+      }
+      
+      .back-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .about {
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      .about-image {
+        order: 0;
+      }
+    }
+    
+    @media (min-width: 1025px) {
+      .about {
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      .about-image {
+        order: 0;
+      }
+    }
+    
+    /* Optimizime shtesë për performancë */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    /* Përbut animacionet në pajisjet me preferenca të redukuara */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      
+      .reveal-on-scroll {
+        transition: none;
+        opacity: 1;
+        transform: none;
       }
     }
   </style>
@@ -642,6 +779,7 @@
   </header>
 
   <section id="home" class="hero">
+    <img class="hero-bg" src="IMG_2618.png" alt="Artas Universal - Shërbime Ndërtimi" loading="eager">
     <div class="hero-content">
       <h1>Cilësi dhe Elegancë në çdo Projekt</h1>
       <p>Shërbime profesionale të ndërtimit me përvojë të gjatë dhe teknologji moderne</p>
@@ -679,31 +817,31 @@
     <h2>Galeria</h2>
     <div class="gallery">
       <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2617.png" alt="Montim profesional i pllakave të bekatonit nga Artas Universal" loading="lazy" width="400" height="300">
+        <img src="IMG_2617.png" alt="Montim profesional i pllakave të bekatonit nga Artas Universal" loading="lazy">
         <div class="gallery-overlay">
           <h3>Montim i pllakave të bekatonit</h3>
         </div>
       </div>
       <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2612.png" alt="Punime me eskavator nga Artas Universal" loading="lazy" width="400" height="300">
+        <img src="IMG_2612.png" alt="Punime me eskavator nga Artas Universal" loading="lazy">
         <div class="gallery-overlay">
           <h3>Punime me eskavator</h3>
         </div>
       </div>
       <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2616.png" alt="Shpuarje profesionale e betonit nga Artas Universal" loading="lazy" width="400" height="300">
+        <img src="IMG_2616.png" alt="Shpuarje profesionale e betonit nga Artas Universal" loading="lazy">
         <div class="gallery-overlay">
           <h3>Shpuarje betoni</h3>
         </div>
       </div>
       <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2614.png" alt="Projekte të ndryshme ndërtimi nga Artas Universal" loading="lazy" width="400" height="300">
+        <img src="IMG_2614.png" alt="Projekte të ndryshme ndërtimi nga Artas Universal" loading="lazy">
         <div class="gallery-overlay">
           <h3>Projekte të ndryshme ndërtimi</h3>
         </div>
       </div>
       <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2620.png" alt="Projekte të tjera të Artas Universal" loading="lazy" width="400" height="300">
+        <img src="IMG_2620.png" alt="Projekte të tjera të Artas Universal" loading="lazy">
         <div class="gallery-overlay">
          <a href="https://www.instagram.com/artasuniversal/" target="_blank" aria-label="Shiko më shumë projekte në Instagram">
             <h3>Për më shumë projekte na vizitoni ne Instagram</h3>
@@ -724,7 +862,7 @@
         <a href="#contact" class="btn">Kontaktoni për më shumë informacion</a>
       </div>
       <div class="about-image reveal-on-scroll">
-        <img src="IMG_2615.jpg" alt="Ekipi i Artas Universal duke punuar në një projekt ndërtimi" loading="lazy" width="600" height="400">
+        <img src="IMG_2615.jpg" alt="Ekipi i Artas Universal duke punuar në një projekt ndërtimi" loading="lazy">
       </div>
     </div>
   </section>
@@ -806,9 +944,9 @@
       <div class="footer-section">
         <h3>Lidhu me ne</h3>
         <ul>
-          <li><i class="fas fa-phone"></i> +389 70 259 975</li>
-          <li><i class="fas fa-envelope"></i> artasuniversal@hotmail.com</li>
-          <li><i class="fas fa-map-marker-alt"></i> Pallcisht i Poshtëm/Tetovë, Maqedonia e Veriut</li>
+          <li><i class="fas fa-phone"></i> <span>+389 70 259 975</span></li>
+          <li><i class="fas fa-envelope"></i> <span>artasuniversal@hotmail.com</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span>Pallcisht i Poshtëm/Tetovë, Maqedonia e Veriut</span></li>
         </ul>
       </div>
     </div>
@@ -845,16 +983,16 @@
       const header = document.querySelector('header');
       const backToTop = document.querySelector('.back-to-top');
       
-      if (window.scrollY > 100) {
-        header.style.padding = '10px 30px';
+      if (window.scrollY > 50) {
+        header.style.padding = '8px 16px';
         header.style.background = 'rgba(44, 62, 80, 0.95)';
       } else {
-        header.style.padding = '15px 30px';
+        header.style.padding = '12px 16px';
         header.style.background = 'var(--primary)';
       }
       
       // Kontrollo nëse duhet të shfaqet butoni "Kthehu në krye"
-      if (window.scrollY > 500) {
+      if (window.scrollY > 300) {
         backToTop.classList.add('visible');
       } else {
         backToTop.classList.remove('visible');
@@ -870,7 +1008,7 @@
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
           window.scrollTo({
-            top: targetElement.offsetTop - 80,
+            top: targetElement.offsetTop - 70,
             behavior: 'smooth'
           });
         }
@@ -889,49 +1027,4 @@
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-            observer.unobserve(entry.target); 
-          }
-        });
-      }, observerOptions);
-
-      // Gjej të gjithë elementet që duam të animojmë
-      const elementsToReveal = document.querySelectorAll('.reveal-on-scroll');
-      
-      // Për çdo element, apliko një vonesë të vogël (efekti "stagger")
-      const groupedElements = {};
-
-      elementsToReveal.forEach(el => {
-        const parentSection = el.closest('section');
-        if (!parentSection) return;
-
-        const parentId = parentSection.id;
-        if (!groupedElements[parentId]) {
-          groupedElements[parentId] = [];
-        }
-        groupedElements[parentId].push(el);
-      });
-
-      // Për çdo grup, apliko vonesat dhe fillo vëzhgimin
-      Object.values(groupedElements).forEach(group => {
-        group.forEach((el, index) => {
-          el.style.setProperty('--scroll-delay', `${index * 0.15}s`);
-          observer.observe(el);
-        });
-      });
-      
-      // Forma e kontaktit - trego mesazh pas dërgimit
-      const contactForm = document.getElementById('contactForm');
-      if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-          // FormSubmit do të trajtojë dërgimin, ne thjesht tregojmë një mesazh
-          setTimeout(() => {
-            alert('Faleminderit për mesazhin tuaj! Do t\'ju kontaktojmë së shpejti.');
-          }, 1000);
-        });
-      }
-    });
-    // === FUNDI I EFEKTIT "WOW" ===
-  </script>
-</body>
-</html>
+            entry
