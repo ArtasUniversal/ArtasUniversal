@@ -6,6 +6,10 @@
   <meta name="description" content="Artas Universal - Shërbime profesionale të ndërtimit: montim pllakash bekaton, punime me eskavator, shpuarje betoni dhe shërbime komunale">
   <title>Artas Universal - Shërbime Profesionale të Ndërtimit</title>
   
+  <!-- Preload critical resources -->
+  <link rel="preload" as="image" href="IMG_2618.png" fetchpriority="high">
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <!-- Meta tags për rrjetet sociale -->
   <meta property="og:title" content="Artas Universal - Shërbime Profesionale të Ndërtimit">
   <meta property="og:description" content="Shërbime profesionale të ndërtimit me përvojë të gjatë dhe teknologji moderne">
@@ -16,22 +20,21 @@
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png">
   <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png">
   
-  <!-- Optimizime për performancë në mobile -->
+  <!-- Optimizime për performancë -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
   
   <style>
+    /* Critical CSS - Load immediately */
     :root {
       --primary: #2c3e50;
       --secondary: #c05100; 
-      --accent: #3498db;
       --light: #f9f9f9;
       --dark: #2c3e50;
       --text: #333;
       --shadow: 0 4px 6px rgba(0,0,0,0.1);
       
-      /* Variabla të reja për madhësitë e shkronjave - optimizuar për mobile */
+      /* Optimized font sizes for mobile */
       --font-xs: 14px;
       --font-sm: 15px;
       --font-md: 16px;
@@ -40,7 +43,7 @@
       --font-xxl: 26px;
       --font-hero: 32px;
       
-      /* Variabla për hapësirat - optimizuar për mobile */
+      /* Optimized spacing for mobile */
       --space-xs: 8px;
       --space-sm: 12px;
       --space-md: 16px;
@@ -55,31 +58,16 @@
       box-sizing: border-box;
     }
 
-    /* === EFEKTI "WOW" - ANIMACION GJATË LËVIZJES === */
-    .reveal-on-scroll {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-      transition-delay: var(--scroll-delay, 0s);
-    }
-    
-    .reveal-on-scroll.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    /* === FUNDI I EFEKTIT "WOW" === */
-    
     body {
-      font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, sans-serif;
       color: var(--text);
       background: var(--light);
       line-height: 1.5;
       font-size: var(--font-sm);
       -webkit-font-smoothing: antialiased;
-      -webkit-tap-highlight-color: transparent;
     }
     
-    /* Header i optimizuar për mobile */
+    /* Critical above-the-fold styles */
     header {
       background: var(--primary);
       padding: var(--space-sm) var(--space-md);
@@ -88,8 +76,6 @@
       top: 0;
       z-index: 1000;
       box-shadow: var(--shadow);
-      transition: all 0.3s ease;
-      backdrop-filter: blur(10px);
     }
     
     .header-container {
@@ -110,6 +96,281 @@
       color: var(--secondary);
     }
     
+    .mobile-menu {
+      display: none;
+      font-size: var(--font-lg);
+      color: white;
+      background: transparent;
+      border: none;
+      padding: 0;
+      width: 44px;
+      height: 44px;
+    }
+    
+    /* Hero section - LCP optimized */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+      height: 70vh;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      margin-top: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      padding: 0 var(--space-md);
+      z-index: 1;
+    }
+    
+    .hero h1 {
+      font-size: var(--font-hero);
+      margin-bottom: var(--space-md);
+      line-height: 1.2;
+    }
+    
+    .hero p {
+      font-size: var(--font-md);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .btn {
+      display: inline-block;
+      background: var(--secondary);
+      color: white;
+      padding: var(--space-sm) var(--space-xl);
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      font-size: var(--font-sm);
+      min-height: 44px;
+      line-height: 1;
+    }
+    
+    /* Non-critical CSS loaded after initial render */
+    </style>
+</head>
+<body>
+  <!-- LCP image in HTML immediately -->
+  <img class="hero-bg" src="IMG_2618.png" alt="Artas Universal - Shërbime Ndërtimi" fetchpriority="high" width="1920" height="1080">
+
+  <header>
+    <div class="header-container">
+      <div class="logo">Artas <span>Universal</span></div>
+      <nav role="navigation" aria-label="Navigimi kryesor">
+        <ul class="nav-links">
+          <li><a href="#home">Faqja Kryesore</a></li>
+          <li><a href="#services">Shërbimet</a></li>
+          <li><a href="#gallery">Galeria</a></li>
+          <li><a href="#about">Rreth nesh</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+        <button class="mobile-menu" aria-label="Hap menynë" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Cilësi dhe Elegancë në çdo Projekt</h1>
+      <p>Shërbime profesionale të ndërtimit me përvojë të gjatë dhe teknologji moderne</p>
+      <a href="#contact" class="btn">Na Kontaktoni</a>
+    </div>
+  </section>
+
+  <!-- Rest of content -->
+  <section id="services">
+    <h2>Shërbimet tona</h2>
+    <div class="services">
+      <div class="service">
+        <i class="fas fa-th"></i>
+        <h3>Montim i pllakave të bekatonit</h3>
+        <p>Montim profesional i pllakave të bekatonit me materiale të cilësisë së lartë dhe teknika moderne.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-tractor"></i>
+        <h3>Punime me eskavator</h3>
+        <p>Shërbime të specializuara me eskavator për projekte të ndryshme ndërtimi dhe zhvillimi.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-hammer"></i>
+        <h3>Shpuarje betoni me mjete profesionale</h3>
+        <p>Shpuarje të saktë dhe të sigurt të betonit me pajisje moderne dhe staf të kualifikuar.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-building"></i>
+        <h3>Shërbime ndërtimi & komunale</h3>
+        <p>Zgjidhje të plota për nevoja të ndryshme ndërtimi dhe shërbime komunale me cilësi të garantuar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Galeria</h2>
+    <div class="gallery">
+      <!-- Optimized images with explicit dimensions -->
+      <div class="gallery-item">
+        <img src="IMG_2617.png" alt="Montim profesional i pllakave të bekatonit" loading="lazy" width="400" height="300">
+        <div class="gallery-overlay">
+          <h3>Montim i pllakave të bekatonit</h3>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="IMG_2612.png" alt="Punime me eskavator" loading="lazy" width="400" height="300">
+        <div class="gallery-overlay">
+          <h3>Punime me eskavator</h3>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="IMG_2616.png" alt="Shpuarje profesionale e betonit" loading="lazy" width="400" height="300">
+        <div class="gallery-overlay">
+          <h3>Shpuarje betoni</h3>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="IMG_2614.png" alt="Projekte të ndryshme ndërtimi" loading="lazy" width="400" height="300">
+        <div class="gallery-overlay">
+          <h3>Projekte të ndryshme ndërtimi</h3>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="IMG_2620.png" alt="Projekte të tjera" loading="lazy" width="400" height="300">
+        <div class="gallery-overlay">
+          <a href="https://www.instagram.com/artasuniversal/" target="_blank">
+            <h3>Për më shumë projekte na vizitoni ne Instagram</h3>
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>Rreth nesh</h2>
+    <div class="about">
+      <div class="about-content">
+        <h3>Ekspertëzë në fushën e ndërtimit</h3>
+        <p>Artas Universal është një kompani me përvojë të gjatë në ofrimin e shërbimeve të ndërtimit. Me një ekip të specializuar dhe pajisje moderne, ne garantojmë cilësinë dhe përfundimin në kohë të çdo projekti.</p>
+        <p>Ne kemi marrë pjesë në projekte të shumta ndërtimi, duke ofruar zgjidhje të qëndrueshme dhe elegante për klientët tanë. Fokusi ynë kryesor është kënaqësia e plotë e klientit dhe përmbushja e të gjitha standardeve të sigurisë.</p>
+        <a href="#contact" class="btn">Kontaktoni për më shumë informacion</a>
+      </div>
+      <div class="about-image">
+        <img src="IMG_2615.jpg" alt="Ekipi i Artas Universal duke punuar" loading="lazy" width="600" height="400">
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2>Kontakt</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <h3>Telefon</h3>
+          <p>+389 70 259 975</p>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <h3>Email</h3>
+          <p>artasuniversal@hotmail.com</p>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Adresa</h3>
+          <p>Pallcisht i Poshtëm/Tetovë, Maqedonia e Veriut</p>
+        </div>
+      </div>
+      
+      <div class="contact-form">
+        <h3>Dërgo një mesazh</h3>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="1cc558a6-2be1-428e-96f2-4c62b932ec5b">
+          <div class="form-group">
+            <label for="name">Emri i plotë</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="message">Mesazhi</label>
+            <textarea id="message" name="message" class="form-control" required></textarea>
+          </div>
+          
+          <input type="hidden" name="_subject" value="Mesazh i ri nga Faqja - Artas Universal">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://artasuniversal.com/faleminderit.html">
+          
+          <button type="submit" class="btn">Dërgo mesazhin</button>
+        </form>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://www.instagram.com/artasuniversal/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Artas Universal</h3>
+        <p>Ofrues i shërbimeve profesionale të ndërtimit me përvojë të gjatë dhe teknologji moderne.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Shërbimet</h3>
+        <ul>
+          <li><a href="#services">Montim i pllakave të bekatonit</a></li>
+          <li><a href="#services">Punime me eskavator</a></li>
+          <li><a href="#services">Shpuarje betoni</a></li>
+          <li><a href="#services">Shërbime ndërtimi & komunale</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Lidhu me ne</h3>
+        <ul>
+          <li><i class="fas fa-phone"></i> +389 70 259 975</li>
+          <li><i class="fas fa-envelope"></i> artasuniversal@hotmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Pallcisht i Poshtëm/Tetovë, Maqedonia e Veriut</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 Artas Universal – Të gjitha të drejtat e rezervuara.</p>
+    </div>
+  </footer>
+
+  <a href="#home" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Non-critical CSS -->
+  <style>
+    /* Non-critical styles loaded after initial render */
     nav {
       display: flex;
       align-items: center;
@@ -152,93 +413,15 @@
       width: 100%;
     }
     
-    .mobile-menu {
-      display: none;
-      font-size: var(--font-lg);
-      color: white;
-      cursor: pointer;
-      background: transparent;
-      border: none;
-      padding: 0;
-      width: 44px;
-      height: 44px;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    /* Hero i optimizuar për mobile */
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
-      height: 70vh;
-      min-height: 500px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      margin-top: 60px;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .hero-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-    
-    .hero-content {
-      max-width: 800px;
-      padding: 0 var(--space-md);
-      z-index: 1;
-    }
-    
-    .hero h1 {
-      font-size: var(--font-hero);
-      margin-bottom: var(--space-md);
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-      line-height: 1.2;
-    }
-    
-    .hero p {
-      font-size: var(--font-md);
-      margin-bottom: var(--space-lg);
-    }
-    
-    .btn {
-      display: inline-block;
-      background: var(--secondary);
-      color: white;
-      padding: var(--space-sm) var(--space-xl);
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s;
-      border: none;
-      cursor: pointer;
-      font-size: var(--font-sm);
-      min-height: 44px;
-      line-height: 1;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
     .btn:hover {
       background: #d35400;
       transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     }
     
     section {
       padding: var(--space-xxl) var(--space-md);
       max-width: 1200px;
       margin: 0 auto;
-      overflow: hidden;
     }
     
     h2 {
@@ -247,7 +430,6 @@
       font-size: var(--font-xxl);
       color: var(--primary);
       position: relative;
-      line-height: 1.2;
     }
     
     h2::after {
@@ -263,7 +445,6 @@
     
     h3 {
       font-size: var(--font-lg);
-      line-height: 1.3;
     }
     
     .services {
@@ -283,7 +464,6 @@
     
     .service:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
     
     .service i {
@@ -297,11 +477,6 @@
       color: var(--primary);
     }
     
-    .service p {
-      font-size: var(--font-sm);
-    }
-    
-    /* Galeria e optimizuar për mobile */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -320,7 +495,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: transform 0.5s;
     }
     
     .gallery-item:hover img {
@@ -341,27 +516,6 @@
     
     .gallery-item:hover .gallery-overlay {
       transform: translateY(0);
-    }
-    
-    .gallery-overlay a {
-      color: white;
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      text-align: center;
-    }
-    
-    .gallery-overlay a h3 {
-      margin: 0 0 var(--space-xs) 0;
-      font-size: var(--font-sm);
-      font-weight: 500;
-    }
-    
-    .gallery-overlay a i {
-      font-size: var(--font-md);
     }
     
     .about {
@@ -428,7 +582,6 @@
       margin-bottom: var(--space-sm);
     }
     
-    /* Forma e kontaktit */
     .contact-form {
       max-width: 600px;
       margin: var(--space-xl) auto 0;
@@ -455,7 +608,6 @@
       border-radius: 6px;
       font-size: var(--font-sm);
       font-family: inherit;
-      min-height: 44px;
     }
     
     textarea.form-control {
@@ -486,10 +638,8 @@
     .social-links a:hover {
       background: white;
       color: var(--secondary);
-      transform: translateY(-3px);
     }
     
-    /* Butoni "Kthehu në krye" */
     .back-to-top {
       position: fixed;
       bottom: 20px;
@@ -507,18 +657,11 @@
       visibility: hidden;
       transition: all 0.3s;
       z-index: 999;
-      box-shadow: var(--shadow);
-      font-size: var(--font-md);
     }
     
     .back-to-top.visible {
       opacity: 1;
       visibility: visible;
-    }
-    
-    .back-to-top:hover {
-      background: #d35400;
-      transform: translateY(-2px);
     }
     
     footer {
@@ -549,61 +692,33 @@
     
     .footer-section ul li {
       margin-bottom: var(--space-xs);
-      display: flex;
-      align-items: center;
     }
     
     .footer-section a {
       color: #ddd;
       text-decoration: none;
-      transition: color 0.3s;
     }
     
     .footer-section a:hover {
       color: var(--secondary);
     }
     
-    /* Rregullimi i numrit të telefonit - nuk do të jetë më blu */
+    /* Fixed phone number color */
     .footer-section .fa-phone,
     .footer-section .fa-envelope,
     .footer-section .fa-map-marker-alt {
       color: #ddd !important;
       margin-right: 8px;
-      width: 16px;
-      text-align: center;
-    }
-    
-    .footer-section ul li span {
-      color: #ddd;
     }
     
     .copyright {
       margin-top: var(--space-lg);
       padding-top: var(--space-md);
       border-top: 1px solid #444;
-      text-align: center;
-      font-size: var(--font-sm);
     }
     
-    /* Responsive Design - Mobile First */
+    /* Mobile optimizations */
     @media (max-width: 768px) {
-      :root {
-        --font-xs: 13px;
-        --font-sm: 14px;
-        --font-md: 15px;
-        --font-lg: 17px;
-        --font-xl: 20px;
-        --font-xxl: 24px;
-        --font-hero: 28px;
-        
-        --space-xs: 6px;
-        --space-sm: 10px;
-        --space-md: 14px;
-        --space-lg: 20px;
-        --space-xl: 28px;
-        --space-xxl: 40px;
-      }
-      
       .nav-links {
         display: none;
         position: fixed;
@@ -613,8 +728,6 @@
         background: var(--primary);
         flex-direction: column;
         padding: var(--space-md) 0;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        z-index: 999;
       }
       
       .nav-links.active {
@@ -624,13 +737,11 @@
       .nav-links li {
         margin: 0;
         text-align: center;
-        width: 100%;
       }
       
       .nav-links a {
         display: block;
         padding: var(--space-sm) var(--space-md);
-        width: 100%;
       }
       
       .mobile-menu {
@@ -643,87 +754,21 @@
         margin-top: 50px;
       }
       
-      .hero h1 {
-        font-size: var(--font-xxl);
-      }
-      
-      .hero p {
-        font-size: var(--font-sm);
-      }
-      
       section {
         padding: var(--space-xl) var(--space-sm);
       }
       
-      h2 {
-        font-size: var(--font-xl);
-        margin-bottom: var(--space-lg);
-      }
-      
       .services {
         grid-template-columns: 1fr;
-        gap: var(--space-md);
-      }
-      
-      .service {
-        padding: var(--space-md);
-      }
-      
-      .service i {
-        font-size: 36px;
       }
       
       .gallery {
         grid-template-columns: 1fr;
-        gap: var(--space-sm);
-      }
-      
-      .gallery-item {
-        height: 200px;
-      }
-      
-      .about {
-        gap: var(--space-lg);
-      }
-      
-      .contact {
-        padding: var(--space-lg) var(--space-md);
-      }
-      
-      .contact-form {
-        padding: var(--space-md);
-      }
-      
-      .contact-info {
-        grid-template-columns: 1fr;
-        gap: var(--space-md);
       }
       
       .footer-content {
         grid-template-columns: 1fr;
-        gap: var(--space-md);
         text-align: center;
-      }
-      
-      .footer-section ul li {
-        justify-content: center;
-      }
-      
-      .back-to-top {
-        bottom: 15px;
-        right: 15px;
-        width: 40px;
-        height: 40px;
-      }
-    }
-    
-    @media (min-width: 769px) and (max-width: 1024px) {
-      .about {
-        grid-template-columns: 1fr 1fr;
-      }
-      
-      .about-image {
-        order: 0;
       }
     }
     
@@ -736,295 +781,31 @@
         order: 0;
       }
     }
-    
-    /* Optimizime shtesë për performancë */
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    
-    /* Përbut animacionet në pajisjet me preferenca të redukuara */
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-      
-      .reveal-on-scroll {
-        transition: none;
-        opacity: 1;
-        transform: none;
-      }
-    }
   </style>
-</head>
-<body>
-  <header>
-    <div class="header-container">
-      <div class="logo">Artas <span>Universal</span></div>
-      <nav role="navigation" aria-label="Navigimi kryesor">
-        <ul class="nav-links">
-          <li><a href="#home">Faqja Kryesore</a></li>
-          <li><a href="#services">Shërbimet</a></li>
-          <li><a href="#gallery">Galeria</a></li>
-          <li><a href="#about">Rreth nesh</a></li>
-          <li><a href="#contact">Kontakt</a></li>
-        </ul>
-        <button class="mobile-menu" aria-label="Hap menynë" aria-expanded="false">
-          <i class="fas fa-bars"></i>
-        </button>
-      </nav>
-    </div>
-  </header>
-
-  <section id="home" class="hero">
-    <img class="hero-bg" src="IMG_2618.png" alt="Artas Universal - Shërbime Ndërtimi" loading="eager">
-    <div class="hero-content">
-      <h1>Cilësi dhe Elegancë në çdo Projekt</h1>
-      <p>Shërbime profesionale të ndërtimit me përvojë të gjatë dhe teknologji moderne</p>
-      <a href="#contact" class="btn">Na Kontaktoni</a>
-    </div>
-  </section>
-
-  <section id="services">
-    <h2>Shërbimet tona</h2>
-    <div class="services">
-      <div class="service reveal-on-scroll">
-        <i class="fas fa-th"></i>
-        <h3>Montim i pllakave të bekatonit</h3>
-        <p>Montim profesional i pllakave të bekatonit me materiale të cilësisë së lartë dhe teknika moderne.</p>
-      </div>
-      <div class="service reveal-on-scroll">
-        <i class="fas fa-tractor"></i>
-        <h3>Punime me eskavator</h3>
-        <p>Shërbime të specializuara me eskavator për projekte të ndryshme ndërtimi dhe zhvillimi.</p>
-      </div>
-      <div class="service reveal-on-scroll">
-        <i class="fas fa-hammer"></i>
-        <h3>Shpuarje betoni me mjete profesionale</h3>
-        <p>Shpuarje të saktë dhe të sigurt të betonit me pajisje moderne dhe staf të kualifikuar.</p>
-      </div>
-      <div class="service reveal-on-scroll">
-        <i class="fas fa-building"></i>
-        <h3>Shërbime ndërtimi & komunale</h3>
-        <p>Zgjidhje të plota për nevoja të ndryshme ndërtimi dhe shërbime komunale me cilësi të garantuar.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="gallery">
-    <h2>Galeria</h2>
-    <div class="gallery">
-      <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2617.png" alt="Montim profesional i pllakave të bekatonit nga Artas Universal" loading="lazy">
-        <div class="gallery-overlay">
-          <h3>Montim i pllakave të bekatonit</h3>
-        </div>
-      </div>
-      <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2612.png" alt="Punime me eskavator nga Artas Universal" loading="lazy">
-        <div class="gallery-overlay">
-          <h3>Punime me eskavator</h3>
-        </div>
-      </div>
-      <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2616.png" alt="Shpuarje profesionale e betonit nga Artas Universal" loading="lazy">
-        <div class="gallery-overlay">
-          <h3>Shpuarje betoni</h3>
-        </div>
-      </div>
-      <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2614.png" alt="Projekte të ndryshme ndërtimi nga Artas Universal" loading="lazy">
-        <div class="gallery-overlay">
-          <h3>Projekte të ndryshme ndërtimi</h3>
-        </div>
-      </div>
-      <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2620.png" alt="Projekte të tjera të Artas Universal" loading="lazy">
-        <div class="gallery-overlay">
-         <a href="https://www.instagram.com/artasuniversal/" target="_blank" aria-label="Shiko më shumë projekte në Instagram">
-            <h3>Për më shumë projekte na vizitoni ne Instagram</h3>
-            <i class="fab fa-instagram"></i>
-         </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2>Rreth nesh</h2>
-    <div class="about">
-      <div class="about-content reveal-on-scroll">
-        <h3>Ekspertëzë në fushën e ndërtimit</h3>
-        <p>Artas Universal është një kompani me përvojë të gjatë në ofrimin e shërbimeve të ndërtimit. Me një ekip të specializuar dhe pajisje moderne, ne garantojmë cilësinë dhe përfundimin në kohë të çdo projekti.</p>
-        <p>Ne kemi marrë pjesë në projekte të shumta ndërtimi, duke ofruar zgjidhje të qëndrueshme dhe elegante për klientët tanë. Fokusi ynë kryesor është kënaqësia e plotë e klientit dhe përmbushja e të gjitha standardeve të sigurisë.</p>
-        <a href="#contact" class="btn">Kontaktoni për më shumë informacion</a>
-      </div>
-      <div class="about-image reveal-on-scroll">
-        <img src="IMG_2615.jpg" alt="Ekipi i Artas Universal duke punuar në një projekt ndërtimi" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="contact">
-      <h2>Kontakt</h2>
-      <div class="contact-info">
-        <div class="contact-item reveal-on-scroll">
-          <i class="fas fa-phone"></i>
-          <h3>Telefon</h3>
-          <p>+389 70 259 975</p>
-        </div>
-        <div class="contact-item reveal-on-scroll">
-          <i class="fas fa-envelope"></i>
-          <h3>Email</h3>
-          <p>artasuniversal@hotmail.com</p>
-        </div>
-        <div class="contact-item reveal-on-scroll">
-          <i class="fas fa-map-marker-alt"></i>
-          <h3>Adresa</h3>
-          <p>Pallcisht i Poshtëm/Tetovë, Maqedonia e Veriut</p>
-        </div>
-      </div>
-      
-      <div class="contact-form reveal-on-scroll">
-        <h3>Dërgo një mesazh</h3>
-    <form action="https://api.web3forms.com/submit" method="POST">
-         <input type="hidden" name="access_key" value="1cc558a6-2be1-428e-96f2-4c62b932ec5b">
-
-          <div class="form-group">
-            <label for="name">Emri i plotë</label>
-            <input type="text" id="name" name="name" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">Telefon</label>
-            <input type="tel" id="phone" name="phone" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="message">Mesazhi</label>
-            <textarea id="message" name="message" class="form-control" required></textarea>
-          </div>
-          
-          <!-- Konfigurime shtesë për FormSubmit -->
-          <input type="hidden" name="_subject" value="Mesazh i ri nga Faqja - Artas Universal">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://artasuniversal.com/faleminderit.html">
-          
-          <button type="submit" class="btn">Dërgo mesazhin</button>
-        </form>
-      </div>
-      
-      <div class="social-links">
-        <a href="https://www.instagram.com/artasuniversal/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Artas Universal</h3>
-        <p>Ofrues i shërbimeve profesionale të ndërtimit me përvojë të gjatë dhe teknologji moderne.</p>
-      </div>
-      <div class="footer-section">
-        <h3>Shërbimet</h3>
-        <ul>
-          <li><a href="#services">Montim i pllakave të bekatonit</a></li>
-          <li><a href="#services">Punime me eskavator</a></li>
-          <li><a href="#services">Shpuarje betoni</a></li>
-          <li><a href="#services">Shërbime ndërtimi & komunale</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Lidhu me ne</h3>
-        <ul>
-          <li><i class="fas fa-phone"></i> <span>+389 70 259 975</span></li>
-          <li><i class="fas fa-envelope"></i> <span>artasuniversal@hotmail.com</span></li>
-          <li><i class="fas fa-map-marker-alt"></i> <span>Pallcisht i Poshtëm/Tetovë, Maqedonia e Veriut</span></li>
-        </ul>
-      </div>
-    </div>
-    <div class="copyright">
-      <p>&copy; 2025 Artas Universal – Të gjitha të drejtat e rezervuara.</p>
-    </div>
-  </footer>
-
-  <a href="#home" class="back-to-top" aria-label="Kthehu në krye të faqes">
-    <i class="fas fa-arrow-up"></i>
-  </a>
 
   <script>
-    // Mobile menu toggle
-    document.querySelector('.mobile-menu').addEventListener('click', function() {
+    // Basic functionality - loaded after render
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu
+      const mobileMenu = document.querySelector('.mobile-menu');
       const navLinks = document.querySelector('.nav-links');
-      const isOpened = navLinks.classList.toggle('active');
-      this.setAttribute('aria-expanded', isOpened);
-    });
-    
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        const navLinks = document.querySelector('.nav-links');
-        if (navLinks.classList.contains('active')) {
-          navLinks.classList.remove('active');
-          document.querySelector('.mobile-menu').setAttribute('aria-expanded', 'false');
-        }
-      });
-    });
-    
-    // Header scroll effect
-    window.addEventListener('scroll', function() {
-      const header = document.querySelector('header');
+      
+      if (mobileMenu) {
+        mobileMenu.addEventListener('click', function() {
+          navLinks.classList.toggle('active');
+        });
+      }
+      
+      // Back to top button
       const backToTop = document.querySelector('.back-to-top');
-      
-      if (window.scrollY > 50) {
-        header.style.padding = '8px 16px';
-        header.style.background = 'rgba(44, 62, 80, 0.95)';
-      } else {
-        header.style.padding = '12px 16px';
-        header.style.background = 'var(--primary)';
-      }
-      
-      // Kontrollo nëse duhet të shfaqet butoni "Kthehu në krye"
-      if (window.scrollY > 300) {
-        backToTop.classList.add('visible');
-      } else {
-        backToTop.classList.remove('visible');
-      }
-    });
-    
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 70,
-            behavior: 'smooth'
-          });
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
         }
       });
     });
-
-    // === EFEKTI "WOW" - KODI JAVASCRIPT ===
-    document.addEventListener('DOMContentLoaded', () => {
-      // Përgatit vëzhguesin (observer)
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-      };
-
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry
+  </script>
+</body>
+</html>
