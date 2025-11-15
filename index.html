@@ -15,10 +15,15 @@
   
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png">
   <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Optimizime për performancë -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
   
   <style>
-    /* Variablat themelore */
+    /* CSS kritik - ngarkuar inline */
     :root {
       --primary: #2c3e50;
       --secondary: #c05100; 
@@ -28,7 +33,6 @@
       --shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
     
-    /* Reset dhe stilizime bazë */
     * {
       margin: 0;
       padding: 0;
@@ -43,7 +47,6 @@
       font-size: 16px;
     }
     
-    /* Header */
     header {
       background: var(--primary);
       padding: 15px 30px;
@@ -72,7 +75,6 @@
       color: var(--secondary);
     }
     
-    /* Navigimi */
     nav {
       display: flex;
       align-items: center;
@@ -108,9 +110,8 @@
       padding: 0;
     }
     
-    /* Hero seksioni */
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('IMG_2618.png') center/cover no-repeat;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
       height: 100vh;
       display: flex;
       align-items: center;
@@ -118,11 +119,29 @@
       text-align: center;
       color: white;
       margin-top: 70px;
+      position: relative;
+    }
+    
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+    .hero-bg.loaded {
+      opacity: 1;
     }
     
     .hero-content {
       max-width: 800px;
       padding: 0 20px;
+      z-index: 1;
     }
     
     .hero h1 {
@@ -136,7 +155,6 @@
       margin-bottom: 30px;
     }
     
-    /* Butonat */
     .btn {
       display: inline-block;
       background: var(--secondary);
@@ -157,7 +175,6 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
     
-    /* Seksionet */
     section {
       padding: 80px 20px;
       max-width: 1200px;
@@ -183,7 +200,6 @@
       transform: translateX(-50%);
     }
     
-    /* Shërbimet */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -216,7 +232,6 @@
       font-size: 22px;
     }
     
-    /* Galeria */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -227,17 +242,21 @@
       position: relative;
       overflow: hidden;
       border-radius: 8px;
+      /* Dimensionet eksplicite për CLS më të mirë */
+      width: 100%;
       height: 250px;
+      aspect-ratio: 4/3;
     }
     
-    .gallery-item img {
+    .gallery-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.5s;
+      background: #f0f0f0;
     }
     
-    .gallery-item:hover img {
+    .gallery-item:hover .gallery-img {
       transform: scale(1.1);
     }
     
@@ -257,7 +276,6 @@
       transform: translateY(0);
     }
     
-    /* Rreth nesh */
     .about {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -279,15 +297,18 @@
       border-radius: 10px;
       overflow: hidden;
       box-shadow: var(--shadow);
-    }
-    
-    .about-image img {
       width: 100%;
       height: auto;
-      display: block;
+      aspect-ratio: 4/3;
     }
     
-    /* Kontakti */
+    .about-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: #f0f0f0;
+    }
+    
     .contact {
       background: var(--primary);
       color: white;
@@ -323,7 +344,6 @@
       margin-bottom: 15px;
     }
     
-    /* Forma e kontaktit */
     .contact-form {
       max-width: 600px;
       margin: 50px auto 0;
@@ -357,7 +377,6 @@
       resize: vertical;
     }
     
-    /* Rrjetet sociale */
     .social-links {
       display: flex;
       justify-content: center;
@@ -384,7 +403,6 @@
       transform: translateY(-5px);
     }
     
-    /* Butoni "Kthehu në krye" */
     .back-to-top {
       position: fixed;
       bottom: 30px;
@@ -415,7 +433,6 @@
       transform: translateY(-3px);
     }
     
-    /* Footer */
     footer {
       background: var(--dark);
       color: #ddd;
@@ -515,7 +532,6 @@
         height: 45px;
       }
       
-      /* Përmirësime për galerinë në mobile */
       .gallery {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -523,6 +539,14 @@
       
       .gallery-item {
         height: 200px;
+      }
+      
+      .contact {
+        padding: 30px 20px;
+      }
+      
+      .contact-form {
+        padding: 20px;
       }
     }
     
@@ -535,17 +559,19 @@
         font-size: 28px;
       }
       
-      .contact {
-        padding: 30px 20px;
-      }
-      
-      .contact-form {
-        padding: 20px;
-      }
-      
       .gallery-item {
         height: 180px;
       }
+    }
+
+    /* CSS jo-kritik - ngarkuar më vonë */
+    .non-critical {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .non-critical.loaded {
+      opacity: 1;
     }
   </style>
 </head>
@@ -569,6 +595,8 @@
   </header>
 
   <section id="home" class="hero">
+    <!-- Imazhi i hero ngarkohet me JavaScript për performancë -->
+    <img class="hero-bg" alt="Artas Universal - Shërbime Ndërtimi" width="1920" height="1080">
     <div class="hero-content">
       <h1>Cilësi dhe Elegancë në çdo Projekt</h1>
       <p>Shërbime profesionale të ndërtimit me përvojë të gjatë dhe teknologji moderne</p>
@@ -605,32 +633,33 @@
   <section id="gallery">
     <h2>Galeria</h2>
     <div class="gallery">
+      <!-- Imazhet e galerisë ngarkohen me JavaScript -->
       <div class="gallery-item">
-        <img src="IMG_2617.png" alt="Montim profesional i pllakave të bekatonit" loading="lazy">
+        <div class="gallery-img" data-src="IMG_2617.png" alt="Montim profesional i pllakave të bekatonit" width="400" height="300"></div>
         <div class="gallery-overlay">
           <h3>Montim i pllakave të bekatonit</h3>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="IMG_2612.png" alt="Punime me eskavator" loading="lazy">
+        <div class="gallery-img" data-src="IMG_2612.png" alt="Punime me eskavator" width="400" height="300"></div>
         <div class="gallery-overlay">
           <h3>Punime me eskavator</h3>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="IMG_2616.png" alt="Shpuarje profesionale e betonit" loading="lazy">
+        <div class="gallery-img" data-src="IMG_2616.png" alt="Shpuarje profesionale e betonit" width="400" height="300"></div>
         <div class="gallery-overlay">
           <h3>Shpuarje betoni</h3>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="IMG_2614.png" alt="Projekte të ndryshme ndërtimi" loading="lazy">
+        <div class="gallery-img" data-src="IMG_2614.png" alt="Projekte të ndryshme ndërtimi" width="400" height="300"></div>
         <div class="gallery-overlay">
           <h3>Projekte të ndryshme ndërtimi</h3>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="IMG_2620.png" alt="Projekte të tjera" loading="lazy">
+        <div class="gallery-img" data-src="IMG_2620.png" alt="Projekte të tjera" width="400" height="300"></div>
         <div class="gallery-overlay">
           <a href="https://www.instagram.com/artasuniversal/" target="_blank">
             <h3>Për më shumë projekte na vizitoni ne Instagram</h3>
@@ -651,7 +680,7 @@
         <a href="#contact" class="btn">Kontaktoni për më shumë informacion</a>
       </div>
       <div class="about-image">
-        <img src="IMG_2615.jpg" alt="Ekipi i Artas Universal duke punuar" loading="lazy">
+        <img class="about-img" data-src="IMG_2615.jpg" alt="Ekipi i Artas Universal duke punuar" width="600" height="400" loading="lazy">
       </div>
     </div>
   </section>
@@ -796,13 +825,76 @@
       });
     });
 
-    // Optimizim për imazhet në mobile
-    if (window.innerWidth <= 768) {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        img.setAttribute('loading', 'lazy');
+    // Optimizime për performancë - Lazy loading i imazheve
+    function loadImages() {
+      // Ngarko imazhin hero
+      const heroImg = document.querySelector('.hero-bg');
+      if (heroImg) {
+        const heroImage = new Image();
+        heroImage.src = 'IMG_2618.png';
+        heroImage.onload = function() {
+          heroImg.src = this.src;
+          heroImg.classList.add('loaded');
+        };
+      }
+      
+      // Ngarko imazhet e galerisë
+      const galleryImages = document.querySelectorAll('.gallery-img[data-src]');
+      galleryImages.forEach(img => {
+        const image = new Image();
+        image.src = img.getAttribute('data-src');
+        image.onload = function() {
+          img.style.backgroundImage = `url(${this.src})`;
+          img.classList.add('loaded');
+        };
       });
+      
+      // Ngarko imazhin about
+      const aboutImg = document.querySelector('.about-img[data-src]');
+      if (aboutImg) {
+        const aboutImage = new Image();
+        aboutImage.src = aboutImg.getAttribute('data-src');
+        aboutImage.onload = function() {
+          aboutImg.src = this.src;
+          aboutImg.classList.add('loaded');
+        };
+      }
     }
+    
+    // Ngarko imazhet kur faqja është gati
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadImages);
+    } else {
+      loadImages();
+    }
+    
+    // Ngarko imazhet e galerisë kur janë të dukshme
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          if (img.dataset.src) {
+            const image = new Image();
+            image.src = img.dataset.src;
+            image.onload = function() {
+              if (img.classList.contains('gallery-img')) {
+                img.style.backgroundImage = `url(${this.src})`;
+              } else {
+                img.src = this.src;
+              }
+              img.classList.add('loaded');
+            };
+            img.removeAttribute('data-src');
+            observer.unobserve(img);
+          }
+        }
+      });
+    });
+    
+    // Vëzhgo të gjitha imazhet për lazy loading
+    document.querySelectorAll('[data-src]').forEach(img => {
+      imageObserver.observe(img);
+    });
   </script>
 </body>
 </html>
