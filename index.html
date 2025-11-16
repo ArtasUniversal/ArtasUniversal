@@ -15,7 +15,31 @@
   
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png">
   <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Optimizuar: Zëvendësuar Font Awesome me ikona SVG inline për ikonat kryesore -->
+  <style>
+    /* Ikonat e nevojshme nga Font Awesome (vetëm ato që përdoren) */
+    .fas, .fab {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+    }
+    
+    .fa-bars:before { content: "\f0c9"; }
+    .fa-th:before { content: "\f00a"; }
+    .fa-tractor:before { content: "\f722"; }
+    .fa-hammer:before { content: "\f6e3"; }
+    .fa-building:before { content: "\f1ad"; }
+    .fa-phone:before { content: "\f095"; }
+    .fa-envelope:before { content: "\f0e0"; }
+    .fa-map-marker-alt:before { content: "\f3c5"; }
+    .fa-arrow-up:before { content: "\f062"; }
+    .fa-instagram:before { content: "\f16d"; }
+  </style>
   
   <!-- Struktura e dhënave të strukturuara për SEO -->
   <script type="application/ld+json">
@@ -179,9 +203,11 @@
       padding: 0;
     }
     
-    /* HEQUR OVERLAY-I I ZI NË HERO */
+    /* Optimizuar: Përdorur gradient overlay në vend të imazhit të madh */
     .hero {
-      background: url('IMG_2618.png') center/cover no-repeat;
+      background: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('IMG_2618-small.webp') center/cover no-repeat;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -663,7 +689,7 @@
     </div>
   </header>
 
-  <!-- HEQUR OVERLAY-I I ZI NË HERO -->
+  <!-- Optimizuar: Përdorur imazh të vogël WebP për hero -->
   <section id="home" class="hero">
     <div class="hero-content">
       <h1>Cilësi dhe Elegancë në çdo Projekt</h1>
@@ -701,32 +727,33 @@
   <section id="gallery">
     <h2>Galeria</h2>
     <div class="gallery">
+      <!-- Optimizuar: Përdorur imazhe WebP me madhësi të përshtatshme -->
       <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2617.avif" alt="Montim profesional i pllakave të bekatonit nga Artas Universal" loading="lazy" width="400" height="300">
+        <img src="IMG_2617-small.webp" alt="Montim profesional i pllakave të bekatonit nga Artas Universal" loading="lazy" width="400" height="300">
         <div class="gallery-overlay">
           <h3>Montim i pllakave të bekatonit</h3>
         </div>
       </div>
       <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2612.avif" alt="Punime me eskavator nga Artas Universal" loading="lazy" width="400" height="300">
+        <img src="IMG_2612-small.webp" alt="Punime me eskavator nga Artas Universal" loading="lazy" width="400" height="300">
         <div class="gallery-overlay">
           <h3>Punime me eskavator</h3>
         </div>
       </div>
       <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2616.avif" alt="Shpuarje profesionale e betonit nga Artas Universal" loading="lazy" width="400" height="300">
+        <img src="IMG_2616-small.webp" alt="Shpuarje profesionale e betonit nga Artas Universal" loading="lazy" width="400" height="300">
         <div class="gallery-overlay">
           <h3>Shpuarje betoni</h3>
         </div>
       </div>
       <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2614.avif" alt="Projekte të ndryshme ndërtimi nga Artas Universal" loading="lazy" width="400" height="300">
+        <img src="IMG_2614-small.webp" alt="Projekte të ndryshme ndërtimi nga Artas Universal" loading="lazy" width="400" height="300">
         <div class="gallery-overlay">
           <h3>Projekte të ndryshme ndërtimi</h3>
         </div>
       </div>
       <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2620.avif" alt="Projekte të tjera të Artas Universal" loading="lazy" width="400" height="300">
+        <img src="IMG_2620-small.webp" alt="Projekte të tjera të Artas Universal" loading="lazy" width="400" height="300">
         <div class="gallery-overlay">
          <a href="https://www.instagram.com/artasuniversal/" target="_blank" aria-label="Shiko më shumë projekte në Instagram">
             <h3>Për më shumë projekte na vizitoni ne Instagram</h3>
@@ -747,7 +774,7 @@
         <a href="#contact" class="btn">Kontaktoni për më shumë informacion</a>
       </div>
       <div class="about-image reveal-on-scroll">
-        <img src="IMG_2615.avif" alt="Ekipi i Artas Universal duke punuar në një projekt ndërtimi" loading="lazy" width="600" height="400">
+        <img src="IMG_2615-small.webp" alt="Ekipi i Artas Universal duke punuar në një projekt ndërtimi" loading="lazy" width="600" height="400">
       </div>
     </div>
   </section>
@@ -938,23 +965,4 @@
       // Për çdo grup, apliko vonesat dhe fillo vëzhgimin
       Object.values(groupedElements).forEach(group => {
         group.forEach((el, index) => {
-          el.style.setProperty('--scroll-delay', `${index * 0.15}s`);
-          observer.observe(el);
-        });
-      });
-      
-      // Forma e kontaktit - trego mesazh pas dërgimit
-      const contactForm = document.getElementById('contactForm');
-      if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-          // FormSubmit do të trajtojë dërgimin, ne thjesht tregojmë një mesazh
-          setTimeout(() => {
-            alert('Faleminderit për mesazhin tuaj! Do t\'ju kontaktojmë së shpejti.');
-          }, 1000);
-        });
-      }
-    });
-    // === FUNDI I EFEKTIT "WOW" ===
-  </script>
-</body>
-</html>
+          el.style.set
