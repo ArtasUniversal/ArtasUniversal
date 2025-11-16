@@ -179,10 +179,9 @@
       padding: 0;
     }
     
-    /* Hero section me background color në vend të imazhit nëse imazhi nuk ngarkon */
+    /* HEQUR OVERLAY-I I ZI NË HERO */
     .hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                  #2c3e50 url('images/hero-bg.jpg') center/cover no-repeat;
+      background: url('IMG_2618.png') center/cover no-repeat;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -300,10 +299,6 @@
       overflow: hidden;
       border-radius: 8px;
       height: 250px;
-      background-color: #f5f5f5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
     
     .gallery-item img {
@@ -375,11 +370,6 @@
       border-radius: 10px;
       overflow: hidden;
       box-shadow: var(--shadow);
-      background-color: #f5f5f5;
-      min-height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
     
     .about-image img {
@@ -582,19 +572,6 @@
       text-align: center;
     }
     
-    /* Stil për placeholder në rast se fotot nuk ngarkojnë */
-    .image-placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #e0e0e0;
-      color: #888;
-      font-size: 16px;
-      text-align: center;
-    }
-    
     /* Responsive Design */
     @media (max-width: 992px) {
       .about {
@@ -686,6 +663,7 @@
     </div>
   </header>
 
+  <!-- HEQUR OVERLAY-I I ZI NË HERO -->
   <section id="home" class="hero">
     <div class="hero-content">
       <h1>Cilësi dhe Elegancë në çdo Projekt</h1>
@@ -724,47 +702,31 @@
     <h2>Galeria</h2>
     <div class="gallery">
       <div class="gallery-item reveal-on-scroll">
-        <!-- Shtegu i ri për imazhin -->
-        <img src="IMG_2612.webp" alt="Montim profesional i pllakave të bekatonit nga Artas Universal" loading="lazy" width="400" height="300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="image-placeholder" style="display:none;">
-          Montim i pllakave të bekatonit
-        </div>
+        <img src="IMG_2617.png" alt="Montim profesional i pllakave të bekatonit nga Artas Universal" loading="lazy" width="400" height="300">
         <div class="gallery-overlay">
           <h3>Montim i pllakave të bekatonit</h3>
         </div>
       </div>
       <div class="gallery-item reveal-on-scroll">
-        <img src="images/punime-eskavator.jpg" alt="Punime me eskavator nga Artas Universal" loading="lazy" width="400" height="300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="image-placeholder" style="display:none;">
-          Punime me eskavator
-        </div>
+        <img src="IMG_2612.png" alt="Punime me eskavator nga Artas Universal" loading="lazy" width="400" height="300">
         <div class="gallery-overlay">
           <h3>Punime me eskavator</h3>
         </div>
       </div>
       <div class="gallery-item reveal-on-scroll">
-        <img src="images/shpuarje-betoni.jpg" alt="Shpuarje profesionale e betonit nga Artas Universal" loading="lazy" width="400" height="300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="image-placeholder" style="display:none;">
-          Shpuarje betoni
-        </div>
+        <img src="IMG_2616.png" alt="Shpuarje profesionale e betonit nga Artas Universal" loading="lazy" width="400" height="300">
         <div class="gallery-overlay">
           <h3>Shpuarje betoni</h3>
         </div>
       </div>
       <div class="gallery-item reveal-on-scroll">
-        <img src="images/projekte-ndertimi.jpg" alt="Projekte të ndryshme ndërtimi nga Artas Universal" loading="lazy" width="400" height="300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="image-placeholder" style="display:none;">
-          Projekte të ndryshme ndërtimi
-        </div>
+        <img src="IMG_2614.png" alt="Projekte të ndryshme ndërtimi nga Artas Universal" loading="lazy" width="400" height="300">
         <div class="gallery-overlay">
           <h3>Projekte të ndryshme ndërtimi</h3>
         </div>
       </div>
       <div class="gallery-item reveal-on-scroll">
-        <img src="images/projekte-tjera.jpg" alt="Projekte të tjera të Artas Universal" loading="lazy" width="400" height="300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="image-placeholder" style="display:none;">
-          Projekte të tjera
-        </div>
+        <img src="IMG_2620.png" alt="Projekte të tjera të Artas Universal" loading="lazy" width="400" height="300">
         <div class="gallery-overlay">
          <a href="https://www.instagram.com/artasuniversal/" target="_blank" aria-label="Shiko më shumë projekte në Instagram">
             <h3>Për më shumë projekte na vizitoni ne Instagram</h3>
@@ -785,10 +747,7 @@
         <a href="#contact" class="btn">Kontaktoni për më shumë informacion</a>
       </div>
       <div class="about-image reveal-on-scroll">
-        <img src="images/rreth-nesh.jpg" alt="Ekipi i Artas Universal duke punuar në një projekt ndërtimi" loading="lazy" width="600" height="400" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="image-placeholder" style="display:none;">
-          Ekipi ynë në punë
-        </div>
+        <img src="IMG_2615.jpg" alt="Ekipi i Artas Universal duke punuar në një projekt ndërtimi" loading="lazy" width="600" height="400">
       </div>
     </div>
   </section>
@@ -816,8 +775,8 @@
       
       <div class="contact-form reveal-on-scroll">
         <h3>Dërgo një mesazh</h3>
-        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="1cc558a6-2be1-428e-96f2-4c62b932ec5b">
+    <form action="https://api.web3forms.com/submit" method="POST">
+         <input type="hidden" name="access_key" value="1cc558a6-2be1-428e-96f2-4c62b932ec5b">
 
           <div class="form-group">
             <label for="name">Emri i plotë</label>
@@ -960,4 +919,42 @@
       }, observerOptions);
 
       // Gjej të gjithë elementet që duam të animojmë
-      const elementsToRe
+      const elementsToReveal = document.querySelectorAll('.reveal-on-scroll');
+      
+      // Për çdo element, apliko një vonesë të vogël (efekti "stagger")
+      const groupedElements = {};
+
+      elementsToReveal.forEach(el => {
+        const parentSection = el.closest('section');
+        if (!parentSection) return;
+
+        const parentId = parentSection.id;
+        if (!groupedElements[parentId]) {
+          groupedElements[parentId] = [];
+        }
+        groupedElements[parentId].push(el);
+      });
+
+      // Për çdo grup, apliko vonesat dhe fillo vëzhgimin
+      Object.values(groupedElements).forEach(group => {
+        group.forEach((el, index) => {
+          el.style.setProperty('--scroll-delay', `${index * 0.15}s`);
+          observer.observe(el);
+        });
+      });
+      
+      // Forma e kontaktit - trego mesazh pas dërgimit
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          // FormSubmit do të trajtojë dërgimin, ne thjesht tregojmë një mesazh
+          setTimeout(() => {
+            alert('Faleminderit për mesazhin tuaj! Do t\'ju kontaktojmë së shpejti.');
+          }, 1000);
+        });
+      }
+    });
+    // === FUNDI I EFEKTIT "WOW" ===
+  </script>
+</body>
+</html>
