@@ -1,978 +1,930 @@
 <!DOCTYPE html>
 <html lang="sq">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Artas Universal - Shërbime profesionale të ndërtimit: montim pllakash bekaton, punime me eskavator, shpuarje betoni dhe shërbime komunale">
-  <title>Artas Universal - Shërbime Profesionale të Ndërtimit</title>
-  
-    <link rel="canonical" href="https://artasuniversal.com">
-  
-  <meta property="og:title" content="Artas Universal - Shërbime Profesionale të Ndërtimit">
-  <meta property="og:description" content="Shërbime profesionale të ndërtimit me përvojë të gjatë dhe teknologji moderne">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png">
-  <meta property="og:url" content="https://artasuniversal.com">
-  
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png">
-  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Artas Universal",
-    "description": "Shërbime profesionale të ndërtimit",
-    "url": "https://artasuniversal.com",
-    "telephone": "+38970259975",
-    "email": "artasuniversal@hotmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Pallcisht i Poshtëm",
-      "addressLocality": "Tetovë",
-      "addressCountry": "Maqedonia e Veriut"
-    },
-    "openingHours": "Mo-Fr 08:00-18:00",
-    "serviceType": [
-      "Montim i pllakave të bekatonit",
-      "Punime me eskavator",
-      "Shpuarje betoni",
-      "Shërbime ndërtimi dhe komunale"
-    ],
-    "areaServed": "Maqedonia e Veriut"
-  }
-  </script>
-  
-  <style>
-    :root {
-      --primary: #2c3e50;
-      --secondary: #c05100; 
-      --accent: #3498db;
-      --light: #f9f9f9;
-      --dark: #2c3e50;
-      --text: #333;
-      --shadow: 0 4px 6px rgba(0,0,0,0.1);
-      
-      /* Variabla të reja për madhësitë e shkronjave */
-      --font-xs: 14px;
-      --font-sm: 16px;
-      --font-md: 18px;
-      --font-lg: 22px;
-      --font-xl: 28px;
-      --font-xxl: 36px;
-      --font-hero: 48px;
-      
-      /* Variabla për hapësirat */
-      --space-xs: 10px;
-      --space-sm: 15px;
-      --space-md: 20px;
-      --space-lg: 30px;
-      --space-xl: 50px;
-      --space-xxl: 80px;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* === EFEKTI "WOW" - ANIMACION GJATË LËVIZJES === */
-    .reveal-on-scroll {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-      transition-delay: var(--scroll-delay, 0s);
-    }
-    
-    .reveal-on-scroll.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    /* === FUNDI I EFEKTIT "WOW" === */
-    
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: var(--text);
-      background: var(--light);
-      line-height: 1.6;
-      font-size: var(--font-sm);
-    }
-    
-    header {
-      background: var(--primary);
-      padding: var(--space-sm) var(--space-lg);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      box-shadow: var(--shadow);
-      transition: all 0.3s ease;
-    }
-    /* KLASË E RE PËR SCROLL - Përdoret nga JS */
-    header.scrolled {
-        padding: 10px var(--space-lg);
-        background: rgba(44, 62, 80, 0.95);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://artasuniversal.xyz">
+  
+  <meta name="description" content="Artas Universal - Shërbime profesionale të ndërtimit: montim pllakash bekaton, punime me eskavator, shpuarje betoni dhe shërbime komunale">
+  <meta name="robots" content="index, follow">
+  <title>Artas Universal - Shërbime Profesionale të Ndërtimit</title>
+  
+  <meta property="og:title" content="Artas Universal - Shërbime Profesionale të Ndërtimit">
+  <meta property="og:description" content="Shërbime profesionale të ndërtimit me përvojë të gjatë dhe teknologji moderne">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png">
+  <meta property="og:url" content="https://artasuniversal.xyz">
+  
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png">
+  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Artas Universal",
+    "description": "Shërbime profesionale të ndërtimit",
+    "url": "https://artasuniversal.xyz",
+    "telephone": "+38970259975",
+    "email": "artasuniversal@hotmail.com",
+    "image": "https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Pallcisht i Poshtëm",
+      "addressLocality": "Tetovë",
+      "addressCountry": "Maqedonia e Veriut"
+    },
+    "serviceType": [
+      "Montim i pllakave të bekatonit",
+      "Punime me eskavator",
+      "Shpuarje betoni",
+      "Shërbime ndërtimi dhe komunale"
+    ],
+    "areaServed": "Maqedonia e Veriut"
+  }
+  </script>
+  
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #c05100; 
+      --accent: #3498db;
+      --light: #f9f9f9;
+      --dark: #2c3e50;
+      --text: #333;
+      --shadow: 0 4px 6px rgba(0,0,0,0.1);
+      
+      --font-xs: 14px;
+      --font-sm: 16px;
+      --font-md: 18px;
+      --font-lg: 22px;
+      --font-xl: 28px;
+      --font-xxl: 36px;
+      --font-hero: 48px;
+      
+      --space-xs: 10px;
+      --space-sm: 15px;
+      --space-md: 20px;
+      --space-lg: 30px;
+      --space-xl: 50px;
+      --space-xxl: 80px;
     }
-    
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .logo {
-      font-size: var(--font-xl);
-      font-weight: bold;
-      color: white;
-    }
-    
-    .logo span {
-      color: var(--secondary);
-    }
-    
-    nav {
-      display: flex;
-      align-items: center;
-    }
-    
-    .nav-links {
-      display: flex;
-      list-style: none;
-    }
-    
-    .nav-links li {
-      margin-left: var(--space-xl);
-    }
-    
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-      position: relative;
-    }
-    
-    .nav-links a:hover {
-      color: var(--secondary);
-    }
-    
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -5px;
-      left: 0;
-      background-color: var(--secondary);
-      transition: width 0.3s;
-    }
-    
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-    
-    .mobile-menu {
-      display: none;
-      font-size: var(--font-lg);
-      color: white;
-      cursor: pointer;
-      background: transparent;
-      border: none;
-      padding: 0;
-    }
-    
-    /* HERO SECTION - Shtohet një overlay për lexueshmëri më të mirë (rregullim) */
-    .hero {
-      background: url('IMG_2618.webp') center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      margin-top: 70px;
-      position: relative; 
-    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    /* Overlay i ri */
-    .hero::before {
-        content: '';
+    /* === EFEKTI "WOW" === */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      transition-delay: var(--scroll-delay, 0s);
+    }
+    
+    .reveal-on-scroll.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.6;
+      font-size: var(--font-sm);
+    }
+    
+    header {
+      background: var(--primary);
+      padding: var(--space-sm) var(--space-lg);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .logo {
+      font-size: var(--font-xl);
+      font-weight: bold;
+      color: white;
+    }
+    
+    .logo span {
+      color: var(--secondary);
+    }
+    
+    nav {
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+    
+    .nav-links li {
+      margin-left: var(--space-xl);
+    }
+    
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+      position: relative;
+    }
+    
+    .nav-links a:hover {
+      color: var(--secondary);
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: var(--secondary);
+      transition: width 0.3s;
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    .mobile-menu {
+      display: none;
+      font-size: var(--font-lg);
+      color: white;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      padding: 0;
+    }
+    
+    /* ZGJIDHJA 3 (Pjesa 2): Sigurohu që 'IMG_2618.webp' ekziston në server */
+    .hero {
+      background: url('IMG_2618.webp') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      margin-top: 70px;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      padding: 0 var(--space-md);
+    }
+    
+    .hero h1 {
+      font-size: var(--font-hero);
+      margin-bottom: var(--space-md);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .hero p {
+      font-size: var(--font-md);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .btn {
+      display: inline-block;
+      background: var(--secondary);
+      color: white;
+      padding: var(--space-xs) var(--space-lg);
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+      font-size: var(--font-sm);
+    }
+    
+    .btn:hover {
+      background: #d35400;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    
+    section {
+      padding: var(--space-xxl) var(--space-md);
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    
+    h2 {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+      font-size: var(--font-xxl);
+      color: var(--primary);
+      position: relative;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 4px;
+      background: var(--secondary);
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    h3 {
+      font-size: var(--font-lg);
+    }
+    
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-lg);
+    }
+    
+    .service {
+      background: white;
+      padding: var(--space-lg);
+      border-radius: 10px;
+      text-align: center;
+      transition: all 0.3s;
+      box-shadow: var(--shadow);
+    }
+    
+    .service:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    
+    .service i {
+      font-size: 48px;
+      color: var(--secondary);
+      margin-bottom: var(--space-md);
+    }
+    
+    .service h3 {
+      margin-bottom: var(--space-sm);
+      color: var(--primary);
+    }
+    
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-md);
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      height: 250px;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+      transform: translateZ(0); 
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: var(--space-sm);
+      transform: translateY(100%);
+      transition: transform 0.3s;
+    }
+    
+    .gallery-item:hover .gallery-overlay {
+      transform: translateY(0);
+    }
+    
+    .gallery-overlay a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
+    }
+    
+    .gallery-overlay a:hover {
+        color: white !important;
+    }
+
+    .gallery-overlay a h3 {
+      margin: 0 0 var(--space-xs) 0;
+      font-size: var(--font-md);
+      font-weight: 500;
+    }
+    
+    .gallery-overlay a i {
+      font-size: var(--font-lg);
+    }
+    
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      align-items: center;
+    }
+    
+    .about-content h3 {
+      margin-bottom: var(--space-md);
+      color: var(--primary);
+    }
+    
+    .about-content p {
+      margin-bottom: var(--space-md);
+    }
+    
+    .about-image {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    
+    .about-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .contact {
+      background: var(--primary);
+      color: white;
+      border-radius: 10px;
+      padding: var(--space-xl);
+      text-align: center;
+    }
+    
+    .contact h2 {
+      color: white;
+    }
+    
+    .contact h2::after {
+      background: var(--secondary);
+    }
+    
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-lg);
+      margin-bottom: var(--space-xl);
+    }
+    
+    .contact-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .contact-item i {
+      font-size: var(--font-xxl);
+      color: var(--secondary);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .contact-form {
+      max-width: 600px;
+      margin: var(--space-xl) auto 0;
+      background: rgba(255, 255, 255, 0.1);
+      padding: var(--space-lg);
+      border-radius: 10px;
+    }
+    
+    .form-group {
+      margin-bottom: var(--space-md);
+      text-align: left;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: var(--space-xs);
+      font-weight: 500;
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: var(--space-sm);
+      border: none;
+      border-radius: 5px;
+      font-size: var(--font-sm);
+      font-family: inherit;
+    }
+    
+    textarea.form-control {
+      min-height: 120px;
+      resize: vertical;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
+    }
+    
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: var(--secondary);
+      color: white;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .social-links a:hover {
+      background: white;
+      color: var(--secondary);
+      transform: translateY(-5px);
+    }
+    
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--secondary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      z-index: 999;
+      box-shadow: var(--shadow);
+    }
+    
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      background: #d35400;
+      transform: translateY(-3px);
+    }
+    
+    footer {
+      background: var(--dark);
+      color: #ddd;
+      text-align: center;
+      padding: var(--space-lg) var(--space-md);
+    }
+    
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-lg);
+      text-align: left;
+    }
+    
+    .footer-section h3 {
+      color: white;
+      margin-bottom: var(--space-md);
+      font-size: var(--font-md);
+    }
+    
+    .footer-section ul {
+      list-style: none;
+    }
+    
+    .footer-section ul li {
+      margin-bottom: var(--space-xs);
+      display: flex;
+      align-items: center;
+    }
+    
+    .footer-section a {
+      color: #ddd;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .footer-section a:hover {
+      color: var(--secondary);
+    }
+    
+    .footer-section .fa-phone,
+    .footer-section .fa-envelope,
+    .footer-section .fa-map-marker-alt {
+      color: #ddd !important;
+      margin-right: 8px;
+      width: 16px;
+      text-align: center;
+    }
+    
+    .gallery-overlay a {
+      color: #ddd !important;
+    }
+    
+    .copyright {
+      margin-top: var(--space-lg);
+      padding-top: var(--space-md);
+      border-top: 1px solid #444;
+      text-align: center;
+    }
+    
+    @media (max-width: 992px) {
+      .about {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: var(--font-xxl);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
         position: absolute;
-        top: 0;
+        top: 70px;
         left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.35); /* Mbulesë e errët 35% */
-        z-index: 1;
+        width: 100%;
+        background: var(--primary);
+        flex-direction: column;
+        padding: var(--space-md) 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .nav-links li {
+        margin: var(--space-xs) 0;
+        text-align: center;
+      }
+      
+      .mobile-menu {
+        display: block;
+      }
+      
+      .hero h1 {
+        font-size: var(--font-xl);
+      }
+      
+      .hero p {
+        font-size: var(--font-sm);
+      }
+      
+      .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+      }
     }
-    
-    .hero-content {
-      max-width: 800px;
-      padding: 0 var(--space-md);
-      position: relative; 
-      z-index: 2;
-    }
-    
-    .hero h1 {
-      font-size: var(--font-hero);
-      margin-bottom: var(--space-md);
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Rritur hija për lexueshmëri */
-    }
-    
-    .hero p {
-      font-size: var(--font-md);
-      margin-bottom: var(--space-lg);
-    }
-    
-    .btn {
-      display: inline-block;
-      background: var(--secondary);
-      color: white;
-      padding: var(--space-xs) var(--space-lg);
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s;
-      border: none;
-      cursor: pointer;
-      font-size: var(--font-sm);
-    }
-    
-    .btn:hover {
-      background: #d35400;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
-    
-    section {
-      padding: var(--space-xxl) var(--space-md);
-      max-width: 1200px;
-      margin: 0 auto;
-      overflow: hidden;
-    }
-    
-    h2 {
-      text-align: center;
-      margin-bottom: var(--space-xl);
-      font-size: var(--font-xxl);
-      color: var(--primary);
-      position: relative;
-    }
-    
-    h2::after {
-      content: '';
-      position: absolute;
-      width: 80px;
-      height: 4px;
-      background: var(--secondary);
-      bottom: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    
-    h3 {
-      font-size: var(--font-lg);
-    }
-    
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: var(--space-lg);
-    }
-    
-    .service {
-      background: white;
-      padding: var(--space-lg);
-      border-radius: 10px;
-      text-align: center;
-      transition: all 0.3s;
-      box-shadow: var(--shadow);
-    }
-    
-    .service:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    }
-    
-    .service i {
-      font-size: 48px;
-      color: var(--secondary);
-      margin-bottom: var(--space-md);
-    }
-    
-    .service h3 {
-      margin-bottom: var(--space-sm);
-      color: var(--primary);
-    }
-    
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: var(--space-md);
-    }
-    
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      height: 250px;
-    }
-    
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s;
-      transform: translateZ(0); /* Për performancë më të mirë */
-    }
-    
-    .gallery-item:hover img {
-      transform: scale(1.1);
-    }
-    
-    .gallery-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0,0,0,0.7);
-      color: white;
-      padding: var(--space-sm);
-      transform: translateY(100%);
-      transition: transform 0.3s;
-    }
-    
-    .gallery-item:hover .gallery-overlay {
-      transform: translateY(0);
-    }
-    
-    .gallery-overlay a {
-      color: white;
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      text-align: center;
-    }
-    
-    .gallery-overlay a h3 {
-      margin: 0 0 var(--space-xs) 0;
-      font-size: var(--font-md);
-      font-weight: 500;
-    }
-    
-    .gallery-overlay a i {
-      font-size: var(--font-lg);
-    }
-    
-    .about {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-xl);
-      align-items: center;
-    }
-    
-    .about-content h3 {
-      margin-bottom: var(--space-md);
-      color: var(--primary);
-    }
-    
-    .about-content p {
-      margin-bottom: var(--space-md);
-    }
-    
-    .about-image {
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-    
-    .about-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    
-    .contact {
-      background: var(--primary);
-      color: white;
-      border-radius: 10px;
-      padding: var(--space-xl);
-      text-align: center;
-    }
-    
-    .contact h2 {
-      color: white;
-    }
-    
-    .contact h2::after {
-      background: var(--secondary);
-    }
-    
-    .contact-info {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: var(--space-lg);
-      margin-bottom: var(--space-xl);
-    }
-    
-    .contact-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .contact-item i {
-      font-size: var(--font-xxl);
-      color: var(--secondary);
-      margin-bottom: var(--space-sm);
-    }
-    
-    /* Forma e kontaktit */
-    .contact-form {
-      max-width: 600px;
-      margin: var(--space-xl) auto 0;
-      background: rgba(255, 255, 255, 0.1);
-      padding: var(--space-lg);
-      border-radius: 10px;
-    }
-    
-    .form-group {
-      margin-bottom: var(--space-md);
-      text-align: left;
-    }
-    
-    .form-group label {
-      display: block;
-      margin-bottom: var(--space-xs);
-      font-weight: 500;
-    }
-    
-    .form-control {
-      width: 100%;
-      padding: var(--space-sm);
-      border: none;
-      border-radius: 5px;
-      font-size: var(--font-sm);
-      font-family: inherit;
-    }
-    
-    textarea.form-control {
-      min-height: 120px;
-      resize: vertical;
-    }
-    
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: var(--space-md);
-      margin-top: var(--space-lg);
-    }
-    
-    .social-links a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 50px;
-      background: var(--secondary);
-      color: white;
-      border-radius: 50%;
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-    
-    .social-links a:hover {
-      background: white;
-      color: var(--secondary);
-      transform: translateY(-5px);
-    }
-    
-    /* Butoni "Kthehu në krye" */
-    .back-to-top {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 50px;
-      height: 50px;
-      background: var(--secondary);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s;
-      z-index: 999;
-      box-shadow: var(--shadow);
-    }
-    
-    .back-to-top.visible {
-      opacity: 1;
-      visibility: visible;
-    }
-    
-    .back-to-top:hover {
-      background: #d35400;
-      transform: translateY(-3px);
-    }
-    
-    footer {
-      background: var(--dark);
-      color: #ddd;
-      text-align: center;
-      padding: var(--space-lg) var(--space-md);
-    }
-    
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: var(--space-lg);
-      text-align: left;
-    }
-    
-    .footer-section h3 {
-      color: white;
-      margin-bottom: var(--space-md);
-      font-size: var(--font-md);
-    }
-    
-    .footer-section ul {
-      list-style: none;
-    }
-    
-    .footer-section ul li {
-      margin-bottom: var(--space-xs);
-      display: flex;
-      align-items: center;
-    }
-    
-    .footer-section a {
-      color: #ddd;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    
-    .footer-section a:hover {
-      color: var(--secondary);
-    }
-    
-    /* FIKSUAR NGJYRËN E TELEFONIT - NUK DO TË JETË MË BLU */
-    .footer-section .fa-phone,
-    .footer-section .fa-envelope,
-    .footer-section .fa-map-marker-alt {
-      color: #ddd !important;
-      margin-right: 8px;
-      width: 16px;
-      text-align: center;
-    }
-    
-    /* FIKSUAR NGJYRËN PËR "PËR MË SHUMË PROJEKTE" */
-    .gallery-overlay a {
-      color: #ddd !important;
-    }
-    
-    .gallery-overlay a:hover {
-      color: white !important;
-    }
-    
-    .copyright {
-      margin-top: var(--space-lg);
-      padding-top: var(--space-md);
-      border-top: 1px solid #444;
-      text-align: center;
-    }
-    
-    /* Responsive Design */
-    @media (max-width: 992px) {
-      .about {
-        grid-template-columns: 1fr;
-      }
-      
-      .hero h1 {
-        font-size: var(--font-xxl);
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: var(--primary);
-        flex-direction: column;
-        padding: var(--space-md) 0;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-      }
-      
-      .nav-links.active {
-        display: flex;
-      }
-      
-      .nav-links li {
-        margin: var(--space-xs) 0;
-        text-align: center;
-      }
-      
-      .mobile-menu {
-        display: block;
-      }
-      
-      .hero h1 {
-        font-size: var(--font-xl);
-      }
-      
-      .hero p {
-        font-size: var(--font-sm);
-      }
-      
-      .back-to-top {
-        bottom: 20px;
-        right: 20px;
-        width: 45px;
-        height: 45px;
-      }
-    }
-    
-    @media (max-width: 576px) {
-      section {
-        padding: 60px var(--space-sm);
-      }
-      
-      h2 {
-        font-size: var(--font-xl);
-      }
-      
-      .contact {
-        padding: var(--space-lg) var(--space-md);
-      }
-      
-      .contact-form {
-        padding: var(--space-md);
-      }
-    }
-  </style>
+    
+    @media (max-width: 576px) {
+      section {
+        padding: 60px var(--space-sm);
+      }
+      h2 {
+        font-size: var(--font-xl);
+      }
+      .contact {
+        padding: var(--space-lg) var(--space-md);
+      }
+      .contact-form {
+        padding: var(--space-md);
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <div class="logo">Artas <span>Universal</span></div>
-      <nav role="navigation" aria-label="Navigimi kryesor">
-        <ul class="nav-links">
-          <li><a href="#home">Faqja Kryesore</a></li>
-          <li><a href="#services">Shërbimet</a></li>
-          <li><a href="#gallery">Galeria</a></li>
-          <li><a href="#about">Rreth nesh</a></li>
-          <li><a href="#contact">Kontakt</a></li>
-        </ul>
-        <button class="mobile-menu" aria-label="Hap menynë" aria-expanded="false">
-          <i class="fas fa-bars"></i>
-        </button>
-      </nav>
-    </div>
-  </header>
+  <header>
+    <div class="header-container">
+      <div class="logo">Artas <span>Universal</span></div>
+      <nav role="navigation" aria-label="Navigimi kryesor">
+        <ul class="nav-links">
+          <li><a href="#home">Faqja Kryesore</a></li>
+          <li><a href="#services">Shërbimet</a></li>
+          <li><a href="#gallery">Galeria</a></li>
+          <li><a href="#about">Rreth nesh</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+        <button class="mobile-menu" aria-label="Hap menynë" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Cilësi dhe Elegancë në çdo Projekt</h1>
-      <p>Shërbime profesionale të ndërtimit me përvojë të gjatë dhe teknologji moderne</p>
-      <a href="#contact" class="btn">Na Kontaktoni</a>
-    </div>
-  </section>
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Cilësi dhe Elegancë në çdo Projekt</h1>
+      <p>Shërbime profesionale të ndërtimit me përvojë të gjatë dhe teknologji moderne</p>
+      <a href="#contact" class="btn">Na Kontaktoni</a>
+    </div>
+  </section>
 
-  <section id="services">
-    <h2>Shërbimet tona</h2>
-    <div class="services">
-      <div class="service reveal-on-scroll">
-        <i class="fas fa-th"></i>
-        <h3>Montim i pllakave të bekatonit</h3>
-        <p>Montim profesional i pllakave të bekatonit me materiale të cilësisë së lartë dhe teknika moderne.</p>
-      </div>
-      <div class="service reveal-on-scroll">
-        <i class="fas fa-tractor"></i>
-        <h3>Punime me eskavator</h3>
-        <p>Shërbime të specializuara me eskavator për projekte të ndryshme ndërtimi dhe zhvillimi.</p>
-      </div>
-      <div class="service reveal-on-scroll">
-        <i class="fas fa-hammer"></i>
-        <h3>Shpuarje betoni me mjete profesionale</h3>
-        <p>Shpuarje të saktë dhe të sigurt të betonit me pajisje moderne dhe staf të kualifikuar.</p>
-      </div>
-      <div class="service reveal-on-scroll">
-        <i class="fas fa-building"></i>
-        <h3>Shërbime ndërtimi & komunale</h3>
-        <p>Zgjidhje të plota për nevoja të ndryshme ndërtimi dhe shërbime komunale me cilësi të garantuar.</p>
-      </div>
-    </div>
-  </section>
+  <section id="services">
+    <h2>Shërbimet tona</h2>
+    <div class="services">
+      <div class="service reveal-on-scroll">
+        <i class="fas fa-th"></i>
+        <h3>Montim i pllakave të bekatonit</h3>
+        <p>Montim profesional i pllakave të bekatonit me materiale të cilësisë së lartë dhe teknika moderne.</p>
+      </div>
+      <div class="service reveal-on-scroll">
+        <i class="fas fa-tractor"></i>
+        <h3>Punime me eskavator</h3>
+        <p>Shërbime të specializuara me eskavator për projekte të ndryshme ndërtimi dhe zhvillimi.</p>
+      </div>
+      <div class="service reveal-on-scroll">
+        <i class="fas fa-hammer"></i>
+        <h3>Shpuarje betoni me mjete profesionale</h3>
+        <p>Shpuarje të saktë dhe të sigurt të betonit me pajisje moderne dhe staf të kualifikuar.</p>
+      </div>
+      <div class="service reveal-on-scroll">
+        <i class="fas fa-building"></i>
+        <h3>Shërbime ndërtimi & komunale</h3>
+        <p>Zgjidhje të plota për nevoja të ndryshme ndërtimi dhe shërbime komunale me cilësi të garantuar.</p>
+      </div>
+    </div>
+  </section>
 
-  <section id="gallery">
-    <h2>Galeria</h2>
-    <div class="gallery">
-      <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2617.webp" alt="Montim profesional i pllakave të bekatonit nga Artas Universal" loading="lazy" width="400" height="300">
-        <div class="gallery-overlay">
-          <h3>Montim i pllakave të bekatonit</h3>
-        </div>
-      </div>
-      <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2612.webp" alt="Punime me eskavator nga Artas Universal" loading="lazy" width="400" height="300">
-        <div class="gallery-overlay">
-          <h3>Punime me eskavator</h3>
-        </div>
-      </div>
-      <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2616.webp" alt="Shpuarje profesionale e betonit nga Artas Universal" loading="lazy" width="400" height="300">
-        <div class="gallery-overlay">
-          <h3>Shpuarje betoni</h3>
-        </div>
-      </div>
-      <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2614.webp" alt="Projekte të ndryshme ndërtimi nga Artas Universal" loading="lazy" width="400" height="300">
-        <div class="gallery-overlay">
-          <h3>Projekte të ndryshme ndërtimi</h3>
-        </div>
-      </div>
-      <div class="gallery-item reveal-on-scroll">
-        <img src="IMG_2620.webp" alt="Projekte të tjera të Artas Universal" loading="lazy" width="400" height="300">
-        <div class="gallery-overlay">
-         <a href="https://www.instagram.com/artasuniversal/" target="_blank" aria-label="Shiko më shumë projekte në Instagram">
-            <h3>Për më shumë projekte na vizitoni ne Instagram</h3>
-            <i class="fab fa-instagram"></i>
-         </a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id="gallery">
+    <h2>Galeria</h2>
+    <div class="gallery">
+      <div class="gallery-item reveal-on-scroll">
+        <img src="IMG_2617.webp" alt="Montim profesional i pllakave të bekatonit nga Artas Universal" loading="lazy" width="400" height="300">
+        <div class="gallery-overlay">
+          <h3>Montim i pllakave të bekatonit</h3>
+        </div>
+      </div>
+      <div class="gallery-item reveal-on-scroll">
+        <img src="IMG_2612.webp" alt="Punime me eskavator nga Artas Universal" loading="lazy" width="400" height="300">
+        <div class="gallery-overlay">
+          <h3>Punime me eskavator</h3>
+        </div>
+      </div>
+      <div class="gallery-item reveal-on-scroll">
+        <img src="IMG_2616.webp" alt="Shpuarje profesionale e betonit nga Artas Universal" loading="lazy" width="400" height="300">
+        <div class="gallery-overlay">
+          <h3>Shpuarje betoni</h3>
+        </div>
+      </div>
+      <div class="gallery-item reveal-on-scroll">
+        <img src="IMG_2614.webp" alt="Projekte të ndryshme ndërtimi nga Artas Universal" loading="lazy" width="400" height="300">
+        <div class="gallery-overlay">
+          <h3>Projekte të ndryshme ndërtimi</h3>
+        </div>
+      </div>
+      <div class="gallery-item reveal-on-scroll">
+        <img src="IMG_2620.webp" alt="Projekte të tjera të Artas Universal" loading="lazy" width="400" height="300">
+        <div class="gallery-overlay">
+           <a href="https://www.instagram.com/artasuniversal/" target="_blank" aria-label="Shiko më shumë projekte në Instagram">
+            <h3>Për më shumë projekte na vizitoni ne Instagram</h3>
+            <i class="fab fa-instagram"></i>
+           </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section id="about">
-    <h2>Rreth nesh</h2>
-    <div class="about">
-      <div class="about-content reveal-on-scroll">
-        <h3>Ekspertëzë në fushën e ndërtimit</h3>
-        <p>Artas Universal është një kompani me përvojë të gjatë në ofrimin e shërbimeve të ndërtimit. Me një ekip të specializuar dhe pajisje moderne, ne garantojmë cilësinë dhe përfundimin në kohë të çdo projekti.</p>
-        <p>Ne kemi marrë pjesë në projekte të shumta ndërtimi, duke ofruar zgjidhje të qëndrueshme dhe elegante për klientët tanë. Fokusi ynë kryesor është kënaqësia e plotë e klientit dhe përmbushja e të gjitha standardeve të sigurisë.</p>
-        <a href="#contact" class="btn">Kontaktoni për më shumë informacion</a>
-      </div>
-      <div class="about-image reveal-on-scroll">
-        <img src="IMG_2615.webp" alt="Ekipi i Artas Universal duke punuar në një projekt ndërtimi" loading="lazy" width="600" height="400">
-      </div>
-    </div>
-  </section>
+  <section id="about">
+    <h2>Rreth nesh</h2>
+    <div class="about">
+      <div class="about-content reveal-on-scroll">
+        <h3>Ekspertizë në fushën e ndërtimit</h3>
+        <p>Artas Universal është një kompani me përvojë të gjatë në ofrimin e shërbimeve të ndërtimit. Me një ekip të specializuar dhe pajisje moderne, ne garantojmë cilësinë dhe përfundimin në kohë të çdo projekti.</p>
+        <p>Ne kemi marrë pjesë në projekte të shumta ndërtimi, duke ofruar zgjidhje të qëndrueshme dhe elegante për klientët tanë. Fokusi ynë kryesor është kënaqësia e plotë e klientit dhe përmbushja e të gjitha standardeve të sigurisë.</p>
+        <a href="#contact" class="btn">Kontaktoni për më shumë informacion</a>
+      </div>
+      <div class="about-image reveal-on-scroll">
+        <img src="IMG_2615.webp" alt="Ekipi i Artas Universal duke punuar në një projekt ndërtimi" loading="lazy" width="600" height="400">
+      </div>
+    </div>
+  </section>
 
-  <section id="contact">
-    <div class="contact">
-      <h2>Kontakt</h2>
-      <div class="contact-info">
-        <div class="contact-item reveal-on-scroll">
-          <i class="fas fa-phone"></i>
-          <h3>Telefon</h3>
-          <p>+389 70 259 975</p>
-        </div>
-        <div class="contact-item reveal-on-scroll">
-          <i class="fas fa-envelope"></i>
-          <h3>Email</h3>
-          <p>artasuniversal@hotmail.com</p>
-        </div>
-        <div class="contact-item reveal-on-scroll">
-          <i class="fas fa-map-marker-alt"></i>
-          <h3>Adresa</h3>
-          <p>Pallcisht i Poshtëm/Tetovë, Maqedonia e Veriut</p>
-        </div>
-      </div>
-      
-      <div class="contact-form reveal-on-scroll">
-        <h3>Dërgo një mesazh</h3>
-        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-         <input type="hidden" name="access_key" value="1cc558a6-2be1-428e-96f2-4c62b932ec5b">
+  <section id="contact">
+    <div class="contact">
+      <h2>Kontakt</h2>
+      <div class="contact-info">
+        <div class="contact-item reveal-on-scroll">
+          <i class="fas fa-phone"></i>
+          <h3>Telefon</h3>
+          <p>+389 70 259 975</p>
+        </div>
+        <div class="contact-item reveal-on-scroll">
+          <i class="fas fa-envelope"></i>
+          <h3>Email</h3>
+          <p>artasuniversal@hotmail.com</p>
+        </div>
+        <div class="contact-item reveal-on-scroll">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Adresa</h3>
+          <p>Pallcisht i Poshtëm/Tetovë, Maqedonia e Veriut</p>
+        </div>
+      </div>
+      
+      <div class="contact-form reveal-on-scroll">
+        <h3>Dërgo një mesazh</h3>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="1cc558a6-2be1-428e-96f2-4c62b932ec5b">
 
-          <div class="form-group">
-            <label for="name">Emri i plotë</label>
-            <input type="text" id="name" name="name" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">Telefon</label>
-            <input type="tel" id="phone" name="phone" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="message">Mesazhi</label>
-            <textarea id="message" name="message" class="form-control" required></textarea>
-          </div>
-          
-          <input type="hidden" name="_subject" value="Mesazh i ri nga Faqja - Artas Universal">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://artasuniversal.com/faleminderit.html">
-          
-          <button type="submit" class="btn">Dërgo mesazhin</button>
-        </form>
-      </div>
-      
-      <div class="social-links">
-        <a href="https://www.instagram.com/artasuniversal/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-  </section>
+          <div class="form-group">
+            <label for="name">Emri i plotë</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="message">Mesazhi</label>
+            <textarea id="message" name="message" class="form-control" required></textarea>
+          </div>
+          
+          <input type="hidden" name="_subject" value="Mesazh i ri nga Faqja - Artas Universal">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://artasuniversal.xyz/faleminderit.html">
+          
+          <button type="submit" class="btn">Dërgo mesazhin</button>
+        </form>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://www.instagram.com/artasuniversal/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Artas Universal</h3>
-        <p>Ofrues i shërbimeve profesionale të ndërtimit me përvojë të gjatë dhe teknologji moderne.</p>
-      </div>
-      <div class="footer-section">
-        <h3>Shërbimet</h3>
-        <ul>
-          <li><a href="#services">Montim i pllakave të bekatonit</a></li>
-          <li><a href="#services">Punime me eskavator</a></li>
-          <li><a href="#services">Shpuarje betoni</a></li>
-          <li><a href="#services">Shërbime ndërtimi & komunale</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Lidhu me ne</h3>
-        <ul>
-          <li><i class="fas fa-phone"></i> +389 70 259 975</li>
-          <li><i class="fas fa-envelope"></i> artasuniversal@hotmail.com</li>
-          <li><i class="fas fa-map-marker-alt"></i> Pallcisht i Poshtëm/Tetovë, Maqedonia e Veriut</li>
-        </ul>
-      </div>
-      </div>
-    <div class="copyright">
-      <p>&copy; 2025 Artas Universal – Të gjitha të drejtat e rezervuara.</p>
-    </div>
-  </footer>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Artas Universal</h3>
+        <p>Ofrues i shërbimeve profesionale të ndërtimit me përvojë të gjatë dhe teknologji moderne.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Shërbimet</h3>
+        <ul>
+          <li><a href="#services">Montim i pllakave të bekatonit</a></li>
+          <li><a href="#services">Punime me eskavator</a></li>
+          <li><a href="#services">Shpuarje betoni</a></li>
+          <li><a href="#services">Shërbime ndërtimi & komunale</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Lidhu me ne</h3>
+        <ul>
+          <li><i class="fas fa-phone"></i> +389 70 259 975</li>
+          <li><i class="fas fa-envelope"></i> artasuniversal@hotmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Pallcisht i Poshtëm/Tetovë, Maqedonia e Veriut</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 Artas Universal – Të gjitha të drejtat e rezervuara.</p>
+    </div>
+  </footer>
 
-  <a href="#home" class="back-to-top" aria-label="Kthehu në krye të faqes">
-    <i class="fas fa-arrow-up"></i>
-  </a>
+  <a href="#home" class="back-to-top" aria-label="Kthehu në krye të faqes">
+    <i class="fas fa-arrow-up"></i>
+  </a>
 
-  <script>
-    // Mobile menu toggle
-    document.querySelector('.mobile-menu').addEventListener('click', function() {
-      const navLinks = document.querySelector('.nav-links');
-      const isOpened = navLinks.classList.toggle('active');
-      this.setAttribute('aria-expanded', isOpened);
-    });
-    
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        const navLinks = document.querySelector('.nav-links');
-        if (navLinks.classList.contains('active')) {
-          navLinks.classList.remove('active');
-          document.querySelector('.mobile-menu').setAttribute('aria-expanded', 'false');
-        }
-      });
-    });
-    
-    // Header scroll effect (Tani përdor klasën CSS 'scrolled')
-    window.addEventListener('scroll', function() {
-      const header = document.querySelector('header');
-      const backToTop = document.querySelector('.back-to-top');
-      
-      if (window.scrollY > 100) {
-        header.classList.add('scrolled'); // SHTUAR KLASA
-      } else {
-        header.classList.remove('scrolled'); // HEQUR KLASA
-      }
-      
-      // Kontrollo nëse duhet të shfaqet butoni "Kthehu në krye"
-      if (window.scrollY > 500) {
-        backToTop.classList.add('visible');
-      } else {
-        backToTop.classList.remove('visible');
-      }
-    });
-    
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu').addEventListener('click', function() {
+      const navLinks = document.querySelector('.nav-links');
+      const isOpened = navLinks.classList.toggle('active');
+      this.setAttribute('aria-expanded', isOpened);
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        const navLinks = document.querySelector('.nav-links');
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          document.querySelector('.mobile-menu').setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+    
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      const backToTop = document.querySelector('.back-to-top');
+      
+      if (window.scrollY > 100) {
+        header.style.padding = '10px 30px';
+        header.style.background = 'rgba(44, 62, 80, 0.95)';
+      } else {
+        header.style.padding = '15px 30px';
+        header.style.background = 'var(--primary)';
+      }
+      
+      if (window.scrollY > 500) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+    
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
 
-    // === EFEKTI "WOW" - KODI JAVASCRIPT ===
-    document.addEventListener('DOMContentLoaded', () => {
-      // Përgatit vëzhguesin (observer)
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-      };
+    // === EFEKTI "WOW" ===
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
 
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-            observer.unobserve(entry.target); 
-          }
-        });
-      }, observerOptions);
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target); 
+          }
+        });
+      }, observerOptions);
 
-      // Gjej të gjithë elementet që duam të animojmë
-      const elementsToReveal = document.querySelectorAll('.reveal-on-scroll');
-      
-      // Për çdo element, apliko një vonesë të vogël (efekti "stagger")
-      const groupedElements = {};
+      const elementsToReveal = document.querySelectorAll('.reveal-on-scroll');
+      const groupedElements = {};
 
-      elementsToReveal.forEach(el => {
-        const parentSection = el.closest('section');
-        if (!parentSection) return;
+      elementsToReveal.forEach(el => {
+        const parentSection = el.closest('section');
+        if (!parentSection) return;
 
-        const parentId = parentSection.id;
-        if (!groupedElements[parentId]) {
-          groupedElements[parentId] = [];
-        }
-        groupedElements[parentId].push(el);
-      });
+        const parentId = parentSection.id;
+        if (!groupedElements[parentId]) {
+          groupedElements[parentId] = [];
+        }
+        groupedElements[parentId].push(el);
+      });
 
-      // Për çdo grup, apliko vonesat dhe fillo vëzhgimin
-      Object.values(groupedElements).forEach(group => {
-        group.forEach((el, index) => {
-          el.style.setProperty('--scroll-delay', `${index * 0.15}s`);
-          observer.observe(el);
-        });
-      });
-      
-      // Forma e kontaktit - trego mesazh pas dërgimit
-      const contactForm = document.getElementById('contactForm');
-      if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-          // FormSubmit do të trajtojë dërgimin, ne thjesht tregojmë një mesazh
-          setTimeout(() => {
-            // Kjo Alert do të shfaqet pak para se Web3Forms të ridrejtojë në faleminderit.html
-            alert('Faleminderit për mesazhin tuaj! Do t\'ju kontaktojmë së shpejti.');
-          }, 100); 
-        });
-      }
-    });
-    // === FUNDI I EFEKTIT "WOW" ===
-  </script>
+      Object.values(groupedElements).forEach(group => {
+        group.forEach((el, index) => {
+          el.style.setProperty('--scroll-delay', `${index * 0.15}s`);
+          observer.observe(el);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
