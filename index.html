@@ -1,18 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="sq">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="canonical" href="https://artasuniversal.xyz">
   
+  <link rel="canonical" href="https://artasuniversal.xyz">
+
   <meta name="description" content="Artas Universal - Shërbime profesionale të ndërtimit: montim pllakash bekaton, punime me eskavator, shpuarje betoni dhe shërbime komunale">
-  <meta name="robots" content="index, follow">
   <title>Artas Universal - Shërbime Profesionale të Ndërtimit</title>
   
   <meta property="og:title" content="Artas Universal - Shërbime Profesionale të Ndërtimit">
   <meta property="og:description" content="Shërbime profesionale të ndërtimit me përvojë të gjatë dhe teknologji moderne">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png">
+  
   <meta property="og:url" content="https://artasuniversal.xyz">
   
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png">
@@ -28,7 +30,6 @@
     "url": "https://artasuniversal.xyz",
     "telephone": "+38970259975",
     "email": "artasuniversal@hotmail.com",
-    "image": "https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Pallcisht i Poshtëm",
@@ -178,7 +179,6 @@
       padding: 0;
     }
     
-    /* ZGJIDHJA 3 (Pjesa 2): Sigurohu që 'IMG_2618.webp' ekziston në server */
     .hero {
       background: url('IMG_2618.webp') center/cover no-repeat;
       height: 100vh;
@@ -339,10 +339,6 @@
       text-align: center;
     }
     
-    .gallery-overlay a:hover {
-        color: white !important;
-    }
-
     .gallery-overlay a h3 {
       margin: 0 0 var(--space-xs) 0;
       font-size: var(--font-md);
@@ -558,6 +554,10 @@
     
     .gallery-overlay a {
       color: #ddd !important;
+    }
+    
+    .gallery-overlay a:hover {
+      color: white !important;
     }
     
     .copyright {
@@ -787,7 +787,7 @@
           <input type="hidden" name="_subject" value="Mesazh i ri nga Faqja - Artas Universal">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://artasuniversal.xyz/faleminderit.html">
+          <input type="hidden" name="_next" value="https://artasuniversal.xyz">
           
           <button type="submit" class="btn">Dërgo mesazhin</button>
         </form>
@@ -924,6 +924,15 @@
           observer.observe(el);
         });
       });
+      
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          setTimeout(() => {
+            alert('Faleminderit për mesazhin tuaj! Do t\'ju kontaktojmë së shpejti.');
+          }, 1000);
+        });
+      }
     });
   </script>
 </body>
