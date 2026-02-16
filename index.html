@@ -19,10 +19,7 @@
   
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png">
   <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/ArtasUniversal/ArtasUniversal/main/ChatGPT%20Image%20Nov%2015%2C%202025%2C%2012_02_22%20AM.png">
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-  <link rel="preload" as="image" href="IMG_2618.avif" fetchpriority="high">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <script type="application/ld+json">
   {
@@ -396,14 +393,9 @@
       height: 250px;
     }
     
-    .gallery-item picture,
     .gallery-item img {
       width: 100%;
       height: 100%;
-      display: block;
-    }
-
-    .gallery-item img {
       object-fit: cover;
       transition: transform 0.5s;
       transform: translateZ(0); 
@@ -859,46 +851,31 @@
     <h2>Galeria</h2>
     <div class="gallery">
       <div class="gallery-item reveal-on-scroll">
-        <picture>
-          <source srcset="IMG_2617.avif" type="image/avif">
-          <img src="IMG_2617.webp" alt="Montim profesional i pllakave të bekatonit nga Artas Universal" loading="lazy" decoding="async" width="400" height="300">
-        </picture>
+        <img src="IMG_2617.webp" alt="Montim profesional i pllakave të bekatonit nga Artas Universal" loading="lazy" width="400" height="300">
         <div class="gallery-overlay">
           <h3>Montim i pllakave të bekatonit</h3>
         </div>
       </div>
       <div class="gallery-item reveal-on-scroll">
-        <picture>
-          <source srcset="IMG_2612.avif" type="image/avif">
-          <img src="IMG_2612.webp" alt="Punime me eskavator nga Artas Universal" loading="lazy" decoding="async" width="400" height="300">
-        </picture>
+        <img src="IMG_2612.webp" alt="Punime me eskavator nga Artas Universal" loading="lazy" width="400" height="300">
         <div class="gallery-overlay">
           <h3>Punime me eskavator</h3>
         </div>
       </div>
       <div class="gallery-item reveal-on-scroll">
-        <picture>
-          <source srcset="IMG_2616.avif" type="image/avif">
-          <img src="IMG_2616.webp" alt="Shpuarje profesionale e betonit nga Artas Universal" loading="lazy" decoding="async" width="400" height="300">
-        </picture>
+        <img src="IMG_2616.webp" alt="Shpuarje profesionale e betonit nga Artas Universal" loading="lazy" width="400" height="300">
         <div class="gallery-overlay">
           <h3>Shpuarje betoni</h3>
         </div>
       </div>
       <div class="gallery-item reveal-on-scroll">
-        <picture>
-          <source srcset="IMG_2614.avif" type="image/avif">
-          <img src="IMG_2614.webp" alt="Projekte të ndryshme ndërtimi nga Artas Universal" loading="lazy" decoding="async" width="400" height="300">
-        </picture>
+        <img src="IMG_2614.webp" alt="Projekte të ndryshme ndërtimi nga Artas Universal" loading="lazy" width="400" height="300">
         <div class="gallery-overlay">
           <h3>Projekte të ndryshme ndërtimi</h3>
         </div>
       </div>
       <div class="gallery-item reveal-on-scroll">
-        <picture>
-          <source srcset="IMG_2620.avif" type="image/avif">
-          <img src="IMG_2620.webp" alt="Projekte të tjera të Artas Universal" loading="lazy" decoding="async" width="400" height="300">
-        </picture>
+        <img src="IMG_2620.webp" alt="Projekte të tjera të Artas Universal" loading="lazy" width="400" height="300">
         <div class="gallery-overlay">
            <a href="https://www.instagram.com/artasuniversal/" target="_blank" rel="noopener noreferrer" aria-label="Shiko më shumë projekte në Instagram">
             <h3>Për më shumë projekte na vizitoni ne Instagram</h3>
@@ -925,7 +902,7 @@
         <a href="#contact" class="btn">Kontaktoni për më shumë informacion</a>
       </div>
       <div class="about-image reveal-on-scroll">
-        <img src="IMG_2615.webp" alt="Ekipi i Artas Universal duke punuar në një projekt ndërtimi" loading="lazy" decoding="async" width="600" height="400">
+        <img src="IMG_2615.webp" alt="Ekipi i Artas Universal duke punuar në një projekt ndërtimi" loading="lazy" width="600" height="400">
       </div>
     </div>
   </section>
@@ -1070,9 +1047,7 @@
       } else {
         backToTop.classList.remove('visible');
       }
-    }, { passive: true });
-
-    updateOnScroll();
+    });
     
     // Smooth scrolling
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
